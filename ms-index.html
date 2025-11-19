@@ -36,12 +36,96 @@
         #mobileMenu { margin: 0; padding: 0; list-style: none; }
         #mobileMenu li { display: inline-block; }
 
-        @media (max-width: 768px) {
-            .mobile-toggle { font-size: 30px; cursor: pointer; color: #062A4D; display: inline-block; margin-right: 10px; }
-            #mobileMenu { display: none; }
-            #mobileMenu.show { display: block; background: #fff; padding: 15px; border-radius: 6px; text-align: right; }
-            #mobileMenu li { display: block; margin: 12px 0; }
-        }
+       @media (max-width: 768px) {
+    .mobile-toggle {
+        display: inline-block;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+
+    .mobile-toggle .mobile-menu-img {
+        width: 20px;
+        height: auto;
+    }
+
+    /* Mobile Menu */
+    #mobileMenu { 
+        display: none; 
+    }
+
+    #mobileMenu.show { 
+        display: block; 
+        background: #fff; 
+        padding: 15px; 
+        border-radius: 6px; 
+        text-align: right; 
+    }
+
+    #mobileMenu li { 
+        display: block; 
+        margin: 12px 0; 
+    }
+}
+
+/* Mobile Toggle Icon */
+.mobile-menu-img {
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* FULLSCREEN MOBILE MENU */
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    display: none;
+    z-index: 9999;
+    animation: fadeIn 0.3s ease;
+}
+
+.mobile-menu-inner {
+    padding: 40px;
+    text-align: center;
+}
+
+.close-menu {
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #28488A;
+    text-align: right;
+    margin-bottom: 128px;
+    margin-right: -7px;
+}
+
+.mobile-menu-list li {
+    list-style: none;
+    margin: 25px 0;
+}
+
+.mobile-menu-list a {
+    font-size: 22px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #28488A;
+}
+
+@media (min-width: 768px) {
+    .mobile-menu-overlay {
+        display: none !important;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
 
         /* HERO SECTION */
         .hero-section { position: relative; width: 100%; overflow: visible; }
@@ -58,7 +142,7 @@
         .hero-inner { max-width: 1320px; margin: 0 auto; padding-left: 20px; padding-right: 20px; }
 
         .hero-head { font-size: 50px; line-height: 56px; color: #28488A; margin: 0 0 20px 0; }
-        .hero-para { font-size: 22px; line-height: 28px; color: #001429; margin: 0 0 24px 0; }
+        .hero-para { font-size: 22px; line-height: 28px; color: #001429; margin: 0 0 24px 0; max-width: 516px; }
         .primary-btn { background: #28488A; color: #fff; padding: 12px 30px; border-radius: 2px; text-transform: uppercase; font-size: 13px; letter-spacing: 2px; text-decoration: none; display: inline-block; }
         .primary-btn:hover { background: #0D223F; color: #fff; }
 
@@ -105,7 +189,73 @@
         @media (max-width: 576px) {
             .hero-head { font-size: 28px; line-height: 34px; }
             .footer-contact { flex-direction: column; gap: 20px; }
+             .nav-logo{
+            height: 24.69px !important;
         }
+        }
+
+    
+
+
+        /* MOBILE HERO FIX */
+@media (max-width: 768px) {
+
+    .hero-section {
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* mobile image full width */
+    .hero-img-mobile {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* remove absolute positioning on mobile */
+    .hero-content {
+        position: relative;
+        top: 0;
+        padding: 20px 0;
+    }
+
+    /* ensure text is aligned and in container */
+    .hero-mobile-container {
+        padding: 0 20px;
+    }
+
+    .hero-head {
+        font-size: 28px;
+        line-height: 36px;
+        font-weight: 600;
+        color: #28488A;
+        margin-bottom: 15px;
+    }
+
+    .hero-para {
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 25px;
+    }
+
+    .primary-btn {
+        padding: 10px 26px;
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    /* remove desktop shapes on mobile */
+    .top-right-white,
+    .dark-blue-bar,
+    .bottom-blue-block {
+        display: none !important;
+    }
+
+    .hero-section{
+        text-align: center;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -113,53 +263,77 @@
 <!-- NAVBAR -->
 <nav class="py-5">
     <div class="global-container d-flex align-items-center justify-content-between">
+
+        <!-- LEFT: LOGO -->
         <div class="d-flex align-items-center">
-            <img src="assets/images/logo.svg" alt="logo" style="height:40px;">
+            <img src="assets/images/logo.svg" alt="logo" style="height:40px;" class="nav-logo">
         </div>
 
+        <!-- RIGHT SIDE -->
         <div class="navbar-links text-end d-flex align-items-center">
-            <div class="mobile-toggle d-md-none me-2" id="mobileToggle">&#9776;</div>
 
-            <ul class="list-inline m-0" id="mobileMenu">
+            <!-- MOBILE TOGGLE -->
+            <div class="mobile-toggle d-md-none me-2" id="mobileToggle">
+                <img src="assets/images/toggle.svg" alt="Menu" class="mobile-menu-img">
+            </div>
+
+            <!-- DESKTOP MENU -->
+            <ul class="list-inline m-0 d-none d-md-block">
                 <li class="list-inline-item mx-2"><a href="#">Core Services</a></li>
                 <li class="list-inline-item mx-2"><a href="#">What Makes Us Different</a></li>
                 <li class="list-inline-item mx-2"><a href="#">Testimonial</a></li>
                 <li class="list-inline-item mx-2"><a href="#">Contact</a></li>
             </ul>
+
+            <!-- FULLSCREEN MOBILE MENU -->
+            <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+                <div class="mobile-menu-inner">
+
+                    <!-- Close Button -->
+                    <div class="close-menu" id="closeMenuBtn">✕</div>
+
+                    <ul class="mobile-menu-list">
+                        <li><a href="#">Core Services</a></li>
+                        <li><a href="#">What Makes Us Different</a></li>
+                        <li><a href="#">Testimonial</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
     </div>
 </nav>
 
-<!-- HERO -->
+
 <section class="hero-section">
     <img src="./assets/images/hero-image-desktop.jpg" class="hero-img d-none d-md-block" alt="Hero Image">
-    <img src="./assets/images/hero-image-mobile.jpg" class="hero-img d-block d-md-none" alt="Hero Image">
+    <img src="./assets/images/hero-image-mobile.jpg" class="hero-img-mobile d-block d-md-none" alt="Hero Image">
 
     <div class="hero-content">
-        <div class="global-container">
-            <div class="hero-inner">
-                <h2 class="mb-3 hero-head">
-                    High-End Residential & <br>
-                    Commercial Contractor <br>
-                    Serving London & the <br>
-                    South East.
-                </h2>
+        <div class="global-container hero-mobile-container">
+            <h2 class="hero-head px-4 px-md-0">
+                High-End Residential & <br>
+                Commercial Contractor <br>
+                Serving London & the <br>
+                South East.
+            </h2>
 
-                <p class="mb-4 hero-para pb-5">
-                    Precision, craftsmanship and professional project <br>
-                    management across structural works, extensions, <br>
-                    refurbishments and commercial fit-outs.
-                </p>
+            <p class="hero-para px-4 px-md-0">
+                Precision, craftsmanship and professional project
+                management across structural works, extensions,
+                refurbishments and commercial fit-outs.
+            </p>
 
-                <a href="#" class="primary-btn">Contact Us</a>
-            </div>
+            <a href="#" class="primary-btn">Contact Us</a>
         </div>
     </div>
 </section>
 
 
+
 <!-- CORE SERVICES -->
-<section class="core-services py-5">
+<section class="core-services py-5 px-4 px-md-0">
     <div class="global-container">
 
         <p class="section-subtitle">MD Building Services —</p>
@@ -234,7 +408,7 @@
 
 
 <!-- WHAT MAKES US DIFFERENT -->
-<section class="different-section py-5">
+<section class="different-section py-5 px-4">
     <div class="global-container">
         <div class="row align-items-center">
             <div class="col-md-6">
@@ -250,7 +424,7 @@
                 <a href="#" class="primary-btn mt-3">Contact Us</a>
             </div>
 
-            <div class="col-md-6 text-end">
+            <div class="col-md-6 text-end pt-5 pt-md-0">
                 <img src="assets/images/third-img.jpg" class="diff-img" alt="diff">
             </div>
         </div>
@@ -343,6 +517,25 @@
         const mobileMenu = document.getElementById("mobileMenu");
         toggleBtn.addEventListener("click", () => { mobileMenu.classList.toggle("show"); });
     });
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+    const toggleBtn = document.getElementById("mobileToggle");
+    const overlay = document.getElementById("mobileMenuOverlay");
+    const closeBtn = document.getElementById("closeMenuBtn");
+
+    // Open menu
+    toggleBtn.addEventListener("click", () => {
+        overlay.style.display = "block";
+    });
+
+    // Close menu
+    closeBtn.addEventListener("click", () => {
+        overlay.style.display = "none";
+    });
+
+});
 </script>
 
 </body>
