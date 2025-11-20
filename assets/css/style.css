@@ -2,6 +2,41 @@
    GLOBAL RESET & BASE STYLES
 ---------------------------- */
 
+@font-face {
+  font-family: "CircularStd";
+  src: url("../assets/fonts/CircularStd-Book.woff2") format("woff2"),
+       url("../assets/fonts/CircularStd-Book.woff") format("woff"),
+       url("../assets/fonts/CircularStd-Book.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CircularStd";
+  src: url("../assets/fonts/CircularStd-BookItalic.woff2") format("woff2"),
+       url("../assets/fonts/CircularStd-BookItalic.woff") format("woff"),
+       url("../assets/fonts/CircularStd-BookItalic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: "CircularStd";
+  src: url("../assets/fonts/CircularStd-Bold.woff2") format("woff2"),
+       url("../assets/fonts/CircularStd-Bold.woff") format("woff"),
+       url("../assets/fonts/CircularStd-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CircularStd";
+  src: url("../assets/fonts/CircularStd-BoldItalic.woff2") format("woff2"),
+       url("../assets/fonts/CircularStd-BoldItalic.woff") format("woff"),
+       url("../assets/fonts/CircularStd-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+
 /* Remove default padding/margin */
 * {
     margin: 0;
@@ -44,6 +79,15 @@ a.btn {
     cursor: pointer;
 }
 
+.navbar-light .navbar-nav .nav-link {
+    color: #28488A;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 5%;
+    font-family: "CircularStd";
+    font-style: normal;
+}
+
 .hero-wrapper {
     position: relative;
 }
@@ -53,7 +97,7 @@ a.btn {
     top: 50%;
     left: 0;
     transform: translateY(-50%);
-    margin-left: 3rem; /* Same as Bootstrap ms-5 */
+    margin-left: 4rem;
     
 }
 
@@ -69,6 +113,7 @@ a.btn {
     font-size: 50px;
     line-height: 56px;
     font-weight: 450;
+    font-family: "CircularStd";
 }
 
 .hero-para{
@@ -126,7 +171,8 @@ a.btn {
             font-size: 16px;
             color: #001429;
             margin-top: 10px;
-            font-weight: 600;
+            font-weight: 500;
+            text-transform: capitalize  !important;
         }
 
         .button-sec {
@@ -145,7 +191,7 @@ a.btn {
 
        /* Testimonial Section */
 .testimonial-section {
-    background-color: #002147; /* your dark blue */
+    background-color: #001429; /* your dark blue */
    
 }
 
@@ -169,14 +215,16 @@ a.btn {
 
 .testimonial-text {
     color: #fff;
-    font-size: 18px;
-    line-height: 1.7;
+    font-size: 16px;
+    line-height: 21px;
     margin-bottom: 20px;
+
 }
 
 .testimonial-author {
     color: #fff;
-    font-weight: 600;
+    font-weight: 400;
+     font-size: 16px;
 }
 
 
@@ -467,3 +515,16 @@ footer .footer-bottom {
         padding-right: 10px !important;
     }
 } */
+
+
+.sec-btn{
+    padding: 18px 39px !important;
+    font-size: 13px;
+    line-height: 12px;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.diff-text{
+    font-size: 16px;
+}
