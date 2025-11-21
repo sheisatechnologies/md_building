@@ -134,6 +134,21 @@ a.btn {
             background: #E8F1FB;
             border-color: #89AEDD;
         }
+        
+        .tooltip-inner {
+    background-color: #DFEAF2 !important;
+    color: #000 !important;      /* text color dark korlam jate pora jaay */
+    border-radius: 6px;          /* optional */
+    padding: 8px 12px;           /* optional */
+}
+
+.tooltip.bs-tooltip-top .tooltip-arrow::before,
+.tooltip.bs-tooltip-bottom .tooltip-arrow::before,
+.tooltip.bs-tooltip-start .tooltip-arrow::before,
+.tooltip.bs-tooltip-end   .tooltip-arrow::before {
+    border-color: #DFEAF2 !important;
+}
+
 
         .service-title {
             font-size: 16px;
@@ -309,6 +324,10 @@ footer .footer-bottom {
 
  /* small screens adjustments */
         @media (max-width: 991px) {
+
+            .sbmb-2 {
+    margin-bottom: -2.5rem !important;
+}
             .hero-head {
                 font-size: 36px;
                 line-height: 42px;
@@ -426,6 +445,7 @@ footer .footer-bottom {
   .hero-wrapper {
    
     position: relative;
+    background-color: #DFEAF2;
   }
 
   .hero-content {
@@ -475,9 +495,15 @@ footer .footer-bottom {
 
   .section-title {
     font-size: 32px;
+    margin-top: 0.2rem;
     
   }
+  .section-title {
+    
+    line-height: 35px;
 }
+}
+
 
 
 /* @media (max-width: 991px) {
@@ -494,6 +520,17 @@ footer .footer-bottom {
     line-height: 12px;
     letter-spacing: 2px;
     font-weight: 500;
+}
+
+.sec-btn:hover{
+    padding: 18px 39px !important;
+    font-size: 13px;
+    line-height: 12px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    background-color: #DFEAF2;
+    color: #001429;
+    border-color: #DFEAF2;
 }
 
 .diff-text{
