@@ -27,7 +27,7 @@
 /* ---------------------------------------------- */
 
 @font-face {
-    font-family: 'Circular Book';
+    font-family: 'Circular Book Italic';
     src: url('../fonts/CircularStd-BookItalic.eot');
     src: url('../fonts/CircularStd-BookItalic.eot?#iefix') format('embedded-opentype'),
         url('../fonts/CircularStd-BookItalic.woff2') format('woff2'),
@@ -213,6 +213,7 @@ strong, .bold {
         line-height: 70px;
         margin: unset;
     }
+ 
 }
 
 /* ---------------------------------------------- */
@@ -449,6 +450,10 @@ a.nav-link.active {
 }
 
 @media (max-width: 991px) {
+
+    .nav-spacer {
+    padding-bottom: 65px !important;
+}
 
     li.nav-item.cta-contact {
         padding-top: 12px;
