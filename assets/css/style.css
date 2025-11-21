@@ -660,7 +660,80 @@ footer .footer-bottom {
     }
 
 .navbar-brand img {
-    height: 28px;
+    height: 25px;
     width: auto;
 }
 
+/* DEFAULT LOGO STATE */
+.logo-white { display: none; }
+.logo-blue { display: block; }
+
+/* MOBILE MENU FULL BLUE BACKGROUND */
+@media (max-width: 991px) {
+
+    .mobile-menu {
+        background: #21468f;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        padding: 40px 30px;
+        z-index: 9998;
+    }
+
+    /* NAV LINKS */
+    .mobile-menu .nav-link {
+        color: #fff !important;
+        font-size: 18px;
+        padding: 18px 0;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-bottom: 1px dashed rgba(255,255,255,0.4);
+    }
+
+    /* LOGO ABOVE MENU, ALWAYS VISIBLE */
+    .navbar-brand {
+        position: relative;
+        z-index: 10000;
+    }
+
+    /* TOGGLER ALWAYS ON TOP */
+    .navbar-toggler {
+        position: relative;
+        z-index: 10001;
+    }
+
+    /* WHEN MENU IS OPEN — BLUE LOGO HIDE, WHITE LOGO SHOW */
+    .navbar-toggler:not(.collapsed) ~ .navbar-brand .logo-blue {
+        display: none;
+    }
+    .navbar-toggler:not(.collapsed) ~ .navbar-brand .logo-white {
+        display: block;
+    }
+
+    /* ALSO WHEN COLLAPSE IS OPEN */
+    .navbar-collapse.show ~ .navbar-brand .logo-blue {
+        display: none;
+    }
+    .navbar-collapse.show ~ .navbar-brand .logo-white {
+        display: block;
+    }
+}
+
+/* TOGGLER ICON WHITE WHEN OPEN */
+.navbar-toggler:not(.collapsed) .toggler-icon {
+    background: #fff !important;
+}
+
+/* default */
+.logo-white { display: none; }
+.logo-blue { display: block; }
+
+/* menu open হলে logo switch হবে */
+body.menu-open .logo-blue {
+    display: none;
+}
+body.menu-open .logo-white {
+    display: block;
+}

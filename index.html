@@ -33,34 +33,47 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light px-md-5 px-3">
-        <div class="container pt-md-4 pt-3 py-3">
-            <a class="navbar-brand" href="#">
-                <img src="assets/images/md-building-services-logo-blue.svg" alt="MD Building Services">
-            </a>
-            <button class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="toggler-icon top-bar"></span>
-                <span class="toggler-icon middle-bar"></span>
-                <span class="toggler-icon bottom-bar"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav ms-auto mb-2 mb-md-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">CORSE SERVICES</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">WHAT MAKES US DIFFERENT</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">TESTIMONIAL</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">CONTACT</a>
-                    </li>
-                </ul>
-            </div>
+ <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light px-md-5 px-3">
+    <div class="container pt-md-4 pt-3 py-3">
+
+        <!-- LOGO -->
+        <a class="navbar-brand" href="#">
+            <!-- BLUE LOGO (default) -->
+            <img class="logo-blue" src="assets/images/md-building-services-logo-blue.svg" alt="MD Building Services">
+
+            <!-- WHITE LOGO (mobile menu open) -->
+            <img class="logo-white" src="assets/images/md-building-services-logo-white.svg" alt="MD Building Services">
+        </a>
+
+        <!-- TOGGLER -->
+        <button class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around"
+            type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="toggler-icon top-bar"></span>
+            <span class="toggler-icon middle-bar"></span>
+            <span class="toggler-icon bottom-bar"></span>
+        </button>
+
+        <!-- MOBILE MENU -->
+        <div class="collapse navbar-collapse mobile-menu" id="navbarCollapse">
+            <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                    <a class="nav-link mobile-link" href="#coreservice">CORSE SERVICES</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mobile-link" href="#makeus">WHAT MAKES US DIFFERENT</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mobile-link" href="#testimonial">TESTIMONIAL</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mobile-link" href="#footer">CONTACT</a>
+                </li>
+            </ul>
         </div>
-    </nav>
+
+    </div>
+</nav>
+
 
     <div class="nav-spacer"></div>
 
@@ -76,7 +89,7 @@
                  class="img-fluid w-100 hero-image d-block d-md-none">
 
             <div class="hero-content text-white mt-5">
-                <h2 class="hero-head pt-5">
+                <h2 class="hero-head pt-2">
                    High-End Residential & Commercial Contractor Serving London & the South East.
 
                 </h2>
@@ -86,7 +99,7 @@
 
                 </p>
 
-                <div class="button-sec text-center text-md-start pt-5">
+                <div class="button-sec text-center text-md-start pt-3">
                  <a href="#" class="btn btn-primary px-4 py-2 sec-btn">
                     Contact Us
                 </a>
@@ -100,7 +113,7 @@
 
    
 
-  <div class="container pt-5 pt-md-0">
+  <div id="coreservice" class="container pt-5 pt-md-0">
 
     <!-- <p class="section-subtitle mt-3 mt-md-5  pt-0 pt-md-5 text-center text-md-start">
         — MD Building Services —
@@ -112,7 +125,7 @@
     <p class="section-subtitle text-center mt-3 mt-md-5  pt-0 pt-md-5 text-md-start">— MD Building Services —</p>
      <h2 class="section-title mb-4 text-center text-md-start"> Core Services</h2>
 
-    <div class="container px-md-4 px-3">
+    <div class="container px-md-0 px-3">
         
         <!-- ZERO GAP ROW -->
         <div class="row text-center mt-4 mb-5 mb-md-4 g-1">
@@ -187,7 +200,7 @@
 
 
 
-<div class="service-sec px-md-5 sbmb-2">
+<div id="makeus" class="service-sec px-md-5 sbmb-2">
     <div class="container">
         <div class="row ptd4 ptm4 pbd4  align-items-center">
              <div class="col-md-7 px-3">
@@ -281,7 +294,7 @@
    
        
 
- <div class="text-center testimonial-section py-md-5 py-5">
+ <div id="testimonial" class="text-center testimonial-section py-md-5 py-5">
     <div class="container">
 
         <p class="section-subtitle text-white  ptd4 ptm4">— MD Building Services —</p>
@@ -362,9 +375,9 @@
 
 
 
-    <footer class="footer-section">
+    <footer id="footer" class="footer-section">
 
-    <div class="container">
+    <div  class="container">
 
         <div class="text-center">
             <p class="footer-subtitle">— MD Building Services —</p>
@@ -377,7 +390,7 @@
     <div class="col-md-3 col-12 text-md-start text-center mb-4">
         <span>Call</span>
         <p>
-            <a href="tel:07841409061" class="text-decoration-none text-white">
+            <a href="tel:07841409061" class=" text-white">
                 07841 409 061
             </a>
         </p>
@@ -386,7 +399,7 @@
     <div class="col-md-3 col-12 text-md-start text-center mb-4 ps-md-5 ms-md-5">
         <span>Email</span>
         <p>
-            <a href="mailto:mark@mdbuildingservices.co.uk" class="text-decoration-none text-white">
+            <a href="mailto:mark@mdbuildingservices.co.uk" class=" text-white">
                 mark@mdbuildingservices.co.uk
             </a>
         </p>
@@ -419,7 +432,12 @@
         <p>All Rights Reserved</p>
         
         </div>
-         <p class="web_credit pb-3">Website By Other Alias</p>
+        <p class="web_credit pb-3">
+    <a href="https://www.otheralias.com/" target="_blank" class=" text-white">
+        Website By Other Alias
+    </a>
+</p>
+
       
     </div>
 
@@ -486,5 +504,17 @@
             toggleBtn.addEventListener("click", () => { mobileMenu.classList.toggle("show"); });
         });
     </script>
+
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const toggler = document.querySelector(".navbar-toggler");
+    const body = document.body;
+
+    toggler.addEventListener("click", function () {
+        body.classList.toggle("menu-open");
+    });
+});
+</script>
+
 </body>
 </html>
