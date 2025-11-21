@@ -737,3 +737,51 @@ body.menu-open .logo-blue {
 body.menu-open .logo-white {
     display: block;
 }
+
+.faq-section {
+    font-family: 'Circular Book', Helvetica, Arial, sans-serif;
+}
+
+.faq-title {
+    color: #28488A;
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.faq-accordion .accordion-item {
+    border: none;
+    border-bottom: 1px dashed #ccc;
+    padding: 12px 0;
+}
+
+.faq-accordion .accordion-button {
+    background: none;
+    color: #001429;
+    font-size: 16px;
+    text-align: left;             /* LEFT ALIGN */
+    width: 100%;
+    justify-content: flex-start;  /* LEFT ALIGN */
+    padding: 18px 0;
+    box-shadow: none;
+}
+
+.faq-accordion .accordion-button:not(.collapsed) {
+    background: none;
+    color: #001429;
+    box-shadow: none;
+}
+
+.faq-accordion .accordion-button::after {
+    background-image: none;
+    content: "+";
+    font-size: 28px;
+    font-weight: 300;
+    position: absolute;
+    right: 0;
+}
+
+.faq-accordion .accordion-button:not(.collapsed)::after {
+    content: "-";
+    font-size: 32px;
+}
