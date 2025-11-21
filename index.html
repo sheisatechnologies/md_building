@@ -516,5 +516,21 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll(".mobile-menu .nav-link");
+    const navbarCollapse = document.getElementById("navbarCollapse");
+    const bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: false });
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            bsCollapse.hide();   // mobile menu বন্ধ হবে
+            document.body.classList.remove("menu-open"); // white logo off
+        });
+    });
+});
+</script>
+
+
 </body>
 </html>
