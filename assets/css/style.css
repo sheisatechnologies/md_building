@@ -738,10 +738,12 @@ body.menu-open .logo-white {
     display: block;
 }
 
+/* FAQ Section Font */
 .faq-section {
     font-family: 'Circular Book', Helvetica, Arial, sans-serif;
 }
 
+/* Title stays center */
 .faq-title {
     color: #28488A;
     font-size: 26px;
@@ -749,29 +751,33 @@ body.menu-open .logo-white {
     text-align: center;
 }
 
+/* Each FAQ row */
 .faq-accordion .accordion-item {
     border: none;
     border-bottom: 1px dashed #ccc;
     padding: 12px 0;
 }
 
+/* QUESTION LINE (center the question text) */
 .faq-accordion .accordion-button {
     background: none;
     color: #001429;
     font-size: 16px;
-    text-align: left;             /* LEFT ALIGN */
-    width: 100%;
-    justify-content: flex-start;  /* LEFT ALIGN */
     padding: 18px 0;
+
+    justify-content: center !important;  /* centers entire question */
+    text-align: left;                    /* inner text still left */
     box-shadow: none;
+    position: relative;
 }
 
+/* Remove bootstrap grey */
 .faq-accordion .accordion-button:not(.collapsed) {
     background: none;
     color: #001429;
-    box-shadow: none;
 }
 
+/* + icon */
 .faq-accordion .accordion-button::after {
     background-image: none;
     content: "+";
@@ -781,7 +787,14 @@ body.menu-open .logo-white {
     right: 0;
 }
 
+/* - icon */
 .faq-accordion .accordion-button:not(.collapsed)::after {
     content: "-";
     font-size: 32px;
+}
+
+/* ANSWER TEXT (left aligned) */
+.faq-accordion .accordion-body {
+    text-align: center !important;
+    padding-left: 0;
 }
