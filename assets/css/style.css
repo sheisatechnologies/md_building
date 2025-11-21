@@ -76,7 +76,7 @@ a.btn {
 
 .hero-head{
     text-transform: capitalize !important;
-    max-width: 494px;
+    max-width: 540px;
     color: #28488A;
     font-size: 50px;
     line-height: 56px;
@@ -225,7 +225,7 @@ footer.footer-section {
 footer .footer-subtitle {
     color: #9DB5CE;
     font-size: 16px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 footer .footer-title {
@@ -266,7 +266,7 @@ footer .footer-logo {
 }
 
 footer .footer-logo img {
-    width: 180px;
+    width: 250px;
     height: auto;
 }
 
@@ -292,8 +292,20 @@ footer .footer-bottom {
     }
 
     footer .footer-logo img {
-        width: 140px;
+        width: 203px;
     }
+
+    .pmobile{
+        padding: 0px;
+    }
+
+    .service-title {
+    font-size: 14px;
+    color: #001429;
+    margin-top: 10px;
+    font-weight: 500;
+    text-transform: capitalize !important;
+}
 }
 
 /* .service-box {
@@ -445,8 +457,15 @@ footer .footer-bottom {
   .hero-wrapper {
    
     position: relative;
-    background-color: #DFEAF2;
+    background-color: #F3F3F5;
   }
+.button-sec {
+    margin-bottom: 67px;
+}
+
+    .ptm4 {
+        padding-top: 88px;
+    }
 
   .hero-content {
     margin-left: 0 !important;
@@ -520,6 +539,7 @@ footer .footer-bottom {
     line-height: 12px;
     letter-spacing: 2px;
     font-weight: 500;
+     font-family: 'Circular Book', Helvetica, Arial, sans-serif;
 }
 
 .sec-btn:hover{
@@ -535,4 +555,27 @@ footer .footer-bottom {
 
 .diff-text{
     font-size: 16px;
+}
+
+.custom-bullet {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.custom-bullet li {
+    position: relative;
+    padding-left: 18px;   /* space between dash and text */
+    text-align: left;
+    font-family: 'Circular Book', Helvetica, Arial, sans-serif;
+}
+
+.custom-bullet li::before {
+    content: "-";
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.web_credit{
+ font-family: 'Circular Book Italic', Helvetica, Arial, sans-serif;
 }
