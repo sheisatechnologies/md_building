@@ -306,6 +306,15 @@ footer .footer-bottom {
     font-weight: 500;
     text-transform: capitalize !important;
 }
+
+.quote-right {
+    bottom: 29px;
+    right: 30px;
+}
+.quote-left {
+    top: -13px;
+    left: 22px;
+}
 }
 
 /* .service-box {
