@@ -208,7 +208,7 @@ a.btn {
 footer.footer-section {
     width: 100%;
     color: #fff;
-    background: #07335B;   /* top background */
+    background: #28488A;   /* top background */
     padding: 60px 0 0;
 }
 
@@ -288,7 +288,18 @@ footer .footer-bottom {
     .pmobile{
         padding: 0px;
     }
+.faq-container {
+  
+    padding: 60px 33px !important;
+   
+}
 
+.faq-question {
+   
+    line-height: 25px !important;
+    font-size: 16px !important;
+   
+}
     .service-title {
     font-size: 14px;
     color: #001429;
@@ -417,6 +428,17 @@ footer .footer-bottom {
                 margin-bottom: 15px;
             }
 
+            .hero-head-mob{
+                font-size: 32px !important;
+                font-weight: 450 !important;
+            }
+
+            .hero-para-mob{
+                font-size: 20px !important;
+                line-height: 23px !important;
+                font-weight: 450 !important;
+            }
+
             .hero-para {
                 font-size: 16px;
                 line-height: 22px;
@@ -481,7 +503,49 @@ footer .footer-bottom {
   body, html {
     overflow-x: hidden !important;
   }
+
+  .button-sec-hero{
+    margin-bottom: 24px !important;
+  }
+
+  .section-title-mob{
+    font-size: 36px !important;
+    line-height: 38px !important;
+    line-height: -2px !important;
+  }
+
+  .service-title-core-mob{
+    font-size: 24px !important;
+    line-height: 28px !important;
+  }
 }
+
+/* MOBILE FIX: Align everything left and stack vertically */
+@media (max-width: 768px) {
+    .service-box {
+        display: block !important;
+        text-align: left !important;
+    }
+
+    .service-icon {
+       
+        display: block;
+    }
+
+    .service-title-core-mob {
+     
+        display: block;
+        width: 100%;
+        text-align: left !important;
+    }
+
+    .core-para {
+        text-align: left !important;
+        display: block;
+        width: 100%;
+    }
+}
+
 
 
 /* Make Core Service boxes wider on mobile like Figma */
@@ -560,6 +624,7 @@ footer .footer-bottom {
     list-style: none;
     padding-left: 0;
     margin: 0;
+   
 }
 
 .custom-bullet li {
@@ -567,6 +632,7 @@ footer .footer-bottom {
     padding-left: 18px;   /* space between dash and text */
     text-align: left;
     font-family: 'Circular Book', Helvetica, Arial, sans-serif;
+    
 }
 
 .custom-bullet li::before {
@@ -594,7 +660,7 @@ footer .footer-bottom {
 
   .locations-section {
         background: #f4f4f6;
-        padding: 80px 0;
+        padding: 130px 0;
     }
 
     /* Subtitle line styling like Figma */
@@ -634,9 +700,10 @@ footer .footer-bottom {
         list-style: none;
         padding-left: 0;
         margin: 0;
-        line-height: 28px;
+        line-height: 25px;
         color: #001429;
         font-size: 16px;
+        font-weight: 400;
     }
     .locations-section ul li:before {
         content: "- ";
@@ -819,6 +886,10 @@ body.menu-open .logo-white {
     letter-spacing: -2px;
 }
 
+.bg-blue{
+    background-color: #F3F3F5;
+}
+
 .intro-btn {
        padding: 18px 39px !important;
     font-size: 13px;
@@ -855,13 +926,13 @@ body.menu-open .logo-white {
 
 
 .featured-projects-section {
-    background: #f9f9f9;
+    background: #F3F3F5;
 }
 
 /* FIXED CARD SIZE */
 .project-card {
-    width: 423px;
-    height: 484px;
+    /* width: 423px; */
+    height: auto;
     background: #fff;
     overflow: hidden;
     border-radius: 0;
@@ -872,7 +943,7 @@ body.menu-open .logo-white {
 /* IMAGE WRAPPER */
 .project-img-wrapper {
     width: 100%;
-    height: 360px; /* ← fits perfectly inside 484px total */
+    /* height: 360px; ← fits perfectly inside 484px total */
     overflow: hidden;
     position: relative;
 }
@@ -889,6 +960,12 @@ body.menu-open .logo-white {
     transform: scale(1.08);
 }
 
+.project-card:hover .project-title {
+    background: #1e3a70; /* darker blue */
+    transition: background 0.3s ease;
+}
+
+
 /* PLUS ICON */
 .plus-icon {
     position: absolute;
@@ -899,19 +976,20 @@ body.menu-open .logo-white {
 .project-title {
     background: #28488A;
     color: white;
-    padding: 12px;
-    text-align: center;
+    padding: 23px;
+    text-align: start;
     font-size: 20px;
     font-family: "Circular Book";
     letter-spacing: 0.3px;
     line-height: 25px;
     letter-spacing: -0.1px;
     font-weight: 400;
+    transition: background 0.3s ease;
 }
 
 /* Section Background */
 .faq-section {
-    background: #f8f8f8;
+   
     padding: 80px 0;
 }
 
@@ -975,6 +1053,239 @@ body.menu-open .logo-white {
     display: inline-block;
     border-radius: 4px;
     letter-spacing: 0.8px;
-    font-family: 'Circular Std', Arial, sans-serif;
+     font-family: "Circular Book";
 }
 
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px; /* increase if answer text is long */
+}
+
+.faq-item.active .faq-icon img {
+    transform: rotate(45deg);
+    transition: 0.3s;
+}
+
+
+/* .my-list li{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: -0.11px;
+     font-family: "Circular Book";
+} */
+
+.footer-links{
+    font-size: 16px;
+    line-height: 44px;
+    font-weight: 400;
+    letter-spacing: -0.11px;
+}
+
+
+
+.intro-block {
+    background: #8A6F2F;
+    /* padding: 120px 0 80px; */
+    position: relative;
+    text-align: left;
+}
+
+.intro-content {
+    max-width: 931px;
+    
+}
+
+.intro-plus {
+    width: 73px;
+           margin-left: 0;
+        margin-right: 0;
+}
+
+.intro-description {
+    font-weight: 450;
+    font-size: 50px;
+    line-height: 52px;
+    color: white;
+   
+    letter-spacing: -2px;
+    font-family: "Circular Book";
+}
+
+.intro-button {
+    display: inline-block;
+    padding: 10px 22px;
+    background: white;
+    color: black;
+    font-size: 12px;
+    border-radius: 3px;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.intro-image-wrap {
+    width: 100%;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.intro-image {
+     
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+
+
+.second-block {
+    background: #ffffff;
+}
+
+.second-plus {
+    width: 73px;
+}
+
+.second-description {
+    font-weight: 450;
+    font-size: 50px;
+    line-height: 52px;
+    color: #001429;
+   max-width: 931px;
+    letter-spacing: -2px;
+    font-family: "Circular Book";
+}
+
+.second-image {
+    max-width: 1165px;
+    width: 100%;
+    display: block;
+       margin: 0 -99px;
+}
+.third-image{
+    max-width: 1165px;
+    width: 100%;
+    display: block;
+       margin: 0 74px;
+}
+
+
+@media (min-width: 1200px) {
+    .intro-image  {
+        max-width: 1065px; /* put your width */
+        margin: 0 auto;   /* optional: center it */
+    }
+}
+
+
+@media (max-width: 768px){
+.intro-description {
+   
+    font-size: 32px !important;
+    line-height: 33.1px !important;
+    text-align: center !important;
+
+}
+
+.intro-plus {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+}
+
+
+/* Mobile: remove padding for the mobile hero image */
+@media (max-width: 767px) {
+    .intro-block {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .intro-image-wrap {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .intro-image {
+        width: 100%;
+        display: block;
+    }
+
+    .second-description {
+    font-size: 30px;
+    line-height: 32px;
+    text-align: center;
+   
+}
+
+.second-plus {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-sec{
+text-align: center;
+}
+
+.second-image {
+   
+    margin: 0;
+}
+
+.second-block .container,
+    .second-block .col-12,
+    .second-block .row {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .second-image {
+        width: 100%;
+        display: block;
+        margin: 0;          /* no gap */
+    }
+
+    .third-image {
+        width: 100%;
+        display: block;
+        margin: 0;          /* no gap */
+    }
+
+    .third-image {
+   
+    margin: 0;
+}
+.second-desk-text{
+    font-size: 14px !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+}
+
+
+.second-desk-text{
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 400;
+    letter-spacing: -0.11px;
+     text-align: right;
+     color: #001429;
+         margin-right: 6rem;
+}
+
+.second-desk-text-left{
+    text-align: left;
+        margin-left: 5rem;
+}
