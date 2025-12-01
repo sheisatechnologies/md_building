@@ -660,7 +660,7 @@ footer .footer-bottom {
 
   .locations-section {
         background: #f4f4f6;
-        padding: 130px 0;
+            padding: 80px 0;
     }
 
     /* Subtitle line styling like Figma */
@@ -1144,8 +1144,8 @@ body.menu-open .logo-white {
 
 
 
-.second-block {
-    background: #ffffff;
+.third-block {
+    background:#F3F3F5;
 }
 
 .second-plus {
@@ -1288,4 +1288,247 @@ text-align: center;
 .second-desk-text-left{
     text-align: left;
         margin-left: 5rem;
+}
+
+
+/* BLUE BOX */
+.blue-box {
+    background: #001733; /* Figma dark blue */
+    border-radius: 4px;
+    padding: 70px 0px;
+    text-align: left;
+    position: relative;
+}
+
+/* TEXT INSIDE BLUE BOX */
+.t-text {
+    color: white;
+    font-size: 34px;
+    line-height: 36px;
+    letter-spacing: -2px;
+    max-width: 827px;
+   font-family: "Circular Book";
+}
+
+.t-more {
+    color:#808994;
+    text-decoration: underline;
+    font-size: 34px;
+    font-family: "Circular Book";
+}
+
+/* QUOTE ICON BOTTOM (BLUE BOX) */
+.quote-btm {
+    width: 60.56px;
+   
+}
+
+/* WHITE SECTION */
+.quote-top {
+    width: 60.56px;
+    
+}
+
+.t-text-dark {
+    font-size: 34px;
+    line-height: 36px;
+    color: #001733;
+    letter-spacing: -2px;
+    max-width: 827px;
+    margin: 0 auto;
+    font-family: "Circular Book";
+}
+
+.t-name {
+    font-size: 34px;
+    color: #808994;
+    margin-top: 10px;
+    font-family: "Circular Book";
+}
+
+
+
+
+
+
+
+
+@media (max-width: 767px) {
+
+    /* Remove only container padding */
+    .testimonials .container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    /* Optional: ensure blue-box is full width */
+    .blue-box {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .t-text {
+    
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: -2px;
+  
+    text-align: center;
+    font-family: "Circular Book";
+}
+.t-text-dark {
+    
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: -2px;
+  
+    text-align: center;
+    max-width: 298px;
+    font-family: "Circular Book";
+}
+.t-name {
+    font-size: 20px;
+    color: #001733;
+    margin-top: 10px;
+    text-align: center;
+    font-family: "Circular Book";
+}
+}
+
+
+@media (max-width: 767px) {
+
+    /* Center the top and bottom comma icons */
+    .testimonials .quote-top,
+    .testimonials .quote-btm {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        display: block !important;
+        text-align: center !important;
+    }
+
+    /* Center the text block also (recommended for clean mobile layout) */
+    .testimonials .col-12,
+    .testimonials p,
+    .testimonials .t-name {
+        text-align: center !important;
+    }
+}
+
+
+.intro-block-resi{
+    background-color: #28488A;
+}
+
+
+
+
+
+.bg-dark-blue {
+    background-color: #082038;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+.fs-5 {
+    font-size: 20px;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+i {
+    font-size: 22px;
+}
+
+
+.contact-icon{
+    height: 62px;
+    width: 62px;
+}
+
+.contact-text{
+    font-size: 40px;
+    line-height: 52px;
+    letter-spacing: -1px;
+    font-weight: 450;
+     font-family: "Circular Book";
+}
+
+.small-txt{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: -0.11px;
+      font-family: "Circular Book";
+}
+
+.para-bottom{
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: -0.11px;
+    font-weight: 700;
+    font-family: "Circular Book";
+}
+
+.contact-txt{
+    font-size: 40px;
+    line-height: 52px;
+    font-weight: 450;
+    letter-spacing: -1px;
+    font-family: "Circular Book";
+}
+
+.con-bottom{
+      font-size: 16px;
+    line-height: 25px;
+    font-weight: 700;
+    letter-spacing: -0.11px;
+    font-family: "Circular Book";
+}
+
+.con-span{
+   font-weight: 400;
+}
+
+.small-con{
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 700;
+    letter-spacing: -0.11px;
+    font-family: "Circular Book";
+}
+
+.icon{
+    height: 62px;
+    width: 62px;;
+}
+
+.social-icn{
+ height: 44.41px;
+    width: 46.17px;;
+}
+
+
+@media (max-width: 767px) {
+
+    .contact-txt{
+    font-size: 20px;
+    line-height: 52px;
+    font-weight: 450;
+    letter-spacing: -1px;
+    font-family: "Circular Book";
+}
+.icon{
+    height: 34px;
+    width: 34px;;
+}
+
+.social-icn{
+ height: 33.98px;
+    width: 30.69px;
+}
 }

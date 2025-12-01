@@ -460,7 +460,7 @@ a.nav-link.active {
     }
     .navbar-light .navbar-nav .nav-link {
         font-size: 16px;
-        padding-bottom: 22px;
+        padding-bottom: 10px;
     }
     .navbar-nav {
         padding-top: 140px;
