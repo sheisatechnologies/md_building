@@ -38,6 +38,199 @@
   ga('send', 'pageview');
 
 </script>
+
+<style>
+   
+    /* DESKTOP TYPOGRAPHY */
+    .section-heading-custom {
+        color: #001429;
+        font-family: "Circular Std", Helvetica, Arial, sans-serif;
+        font-weight: 450;
+        font-size: 50px;
+        line-height: 52px;
+        letter-spacing: -2px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    /* MOBILE TYPOGRAPHY (Your exact settings) */
+    @media (max-width: 767px) {
+        .section-heading-custom {
+            font-size: 20px;
+            line-height: 23px;
+            letter-spacing: 0px;
+            font-weight: 450;
+            text-align: center;
+        }
+    }
+</style>
+<style>
+    .hero-section {
+    position: relative;
+    width: 100%;
+}
+
+/* full width bg image */
+.hero-bg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* container overlay on image */
+.hero-overlay {
+    position: absolute;
+    top: 50%;                          /* move to vertical center */
+    left: 50%;
+    transform: translate(-50%, -50%);  /* true centering */
+    width: 100%;
+}
+
+/* ensure content stays inside container */
+.hero-content {
+    max-width: 1140px;  /* Bootstrap container max */
+    margin: 0 auto;
+}
+
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .hero-overlay {
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
+
+
+/* Hero section fixed height on large screens */
+@media (min-width: 992px) {
+    .hero-section {
+        height: 750px; /* You can adjust based on your design */
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero-bg {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;        /* keeps image beautiful */
+        object-position: center;  /* focus center */
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+
+/* Hero section fixed height on large screens */
+@media (min-width: 1500px) {
+    .hero-section {
+        height: 1000px; /* You can adjust based on your design */
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero-bg {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;        /* keeps image beautiful */
+        object-position: center;  /* focus center */
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+/* Mobile auto height */
+@media (max-width: 991px) {
+    .hero-bg {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+}
+
+
+
+</style>
+
+<style>
+    /* SECTION BACKGROUND SPLIT */
+
+
+.makesus-section {
+    background-color: #001429; /* তোমার color */
+             /* উপরে নিচে spacing */
+    width: 100%;
+}
+
+/* LEFT DARK BLOCK */
+.left-box {
+    background-color: #001429; /* your Figma navy */
+    min-height: 500px; /* auto adjust based on content */
+}
+
+/* LIST STYLE */
+.diff-list {
+    list-style: none;
+    padding: 0;
+}
+.diff-list li {
+    margin-bottom: 15px;
+    padding-left: 20px;
+    position: relative;
+}
+.diff-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 22px;
+    color: #fff;
+}
+
+/* RIGHT IMAGE FULL HEIGHT */
+.right-image {
+    background-image: url("assets/images/home-makes-us-different.jpg");
+    background-size: cover;
+    background-position: center right;
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+}
+
+/* RESPONSIVE FIX */
+@media (max-width: 767px) {
+    .right-image {
+        height: 300px;
+    }
+}
+
+.custom-btn {
+    width: 253px;
+    height: 53px;
+    background-color: white !important;
+    color: #28488A !important;
+     /* optional: add border for style */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.custom-btn:hover {
+    background-color: blue !important;
+    color: white !important;
+}
+.bg-white{
+    background-color: white;
+    color: #28488A;
+;
+}
+</style>
 </head>
 <body>
 
@@ -65,10 +258,10 @@
         <div class="collapse navbar-collapse mobile-menu" id="navbarCollapse">
             <ul class="navbar-nav ms-auto mb-2 mb-md-0">
                 <li class="nav-item">
-                    <a class="nav-link mobile-link" href="index2.html">HOME</a>
+                    <a class="nav-link mobile-link" href="index.html">HOME</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mobile-link" href="#makeus">ABOUT</a>
+                    <a class="nav-link mobile-link" href="about.html">ABOUT</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link mobile-link" href="residential.html">RESIDENTIAL</a>
@@ -77,7 +270,7 @@
                     <a class="nav-link mobile-link" href="commercial.html">COMMERCIAL</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link mobile-link" href="#footer">PORFOLIO</a>
+                    <a class="nav-link mobile-link" href="portfolio.html">PORFOLIO</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link mobile-link" href="contact.html">CONTACT</a>
@@ -89,41 +282,70 @@
 </nav>
 
 
-    <div class="nav-spacer"></div>
+   <div class="nav-spacer d-block d-md-none"></div>
 
-<div class="container pmobile">
-    <div class="row">
-        <div class="col-lg-12 hero-wrapper pt-3">
-            
-            <img src="assets/images/hero-image-desktop.jpg" 
-                 alt="MD Building Services" 
-                 class="img-fluid w-100 hero-image d-none d-md-block">
-                 <img src="assets/images/hero-image-mobile.jpg" 
-                 alt="MD Building Services" 
-                 class="img-fluid w-100 hero-image d-block d-md-none">
+<div class="hero-section">
 
-            <div class="hero-content text-white mt-5">
-                <h2 class="hero-head pt-2">
-                   High-End Residential & Commercial Contractor Serving London & the South East.
+    <!-- FULL WIDTH IMAGE -->
+    <img src="assets/images/md-building-services-hero-02.jpg" 
+         class="img-fluid w-100 d-none d-md-block hero-bg">
 
-                </h2>
+    <img src="assets/images/hero-image-mobile.jpg" 
+         class="img-fluid w-100 d-block d-md-none hero-bg">
 
-                <p class="hero-para mb-md-5 px-3 px-md-0 mt-4">
-                 Precision, craftsmanship and professional project management across structural works, extensions, refurbishments and commercial fit-outs.
+    <!-- CONTENT OVER IMAGE -->
+    <div class="container hero-overlay mt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-md-11 col-12">
 
-                </p>
+                <div class="hero-content text-white text-center text-md-start">
+                    <h2 class="hero-head">
+                        High-End Residential & Commercial Contractor Serving London & the South East.
+                    </h2>
 
-                <div class="button-sec text-center text-md-start pt-3">
-                 <a href="#footer" class="btn btn-primary px-4 py-2 sec-btn">
-                    Contact Us
-                </a>
+                    <p class="hero-para d-block d-md-none mt-3">
+                        Precision construction, structural expertise...
+                    </p>
+                      <div class="button-sec text-center text-md-start pb-md-4 mt-5">
+            <a href="#footer" class="btn btn-primary px-4 py-2 sec-btn bg-white">
+                 VIEW OUR PORTFOLIO
+            </a>
             </div>
-            </div>
 
+
+                     
+
+                </div>
+
+            </div>
         </div>
     </div>
+
 </div>
 
+<section class="py-5 bg-blue d-md-block d-none">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-xl-10 text-center">
+
+                <!-- HEADING -->
+                <h2 class="section-heading-custom mb-4 pt-5 pb-5 mt-md-5 mb-md-4">
+                    Precision construction, structural expertise and professional project management for luxury home renovations, extensions, restaurant fit-outs, commercial refurbishments and architect-led developments.
+                </h2>
+
+                <!-- BUTTON -->
+               <div class="button-sec text-center text-md-center pb-md-4">
+            <a href="#footer" class="btn btn-primary px-4 py-2 sec-btn">
+                Contact Us 
+            </a>
+            </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+  
+ 
 
    
 
@@ -136,67 +358,93 @@
     <h2 class="section-titletext-center text-md-start">
         Core Services
     </h2> -->
-    <p class="section-subtitle text-center mt-3 mt-md-5  pt-0 pt-md-5 text-md-start">— MD Building Services —</p>
-     <h2 class="section-title mb-4 text-center text-md-start"> Core Services</h2>
+    <p class="section-subtitle text-center mt-3 mt-md-5  pt-0 pt-md-5 text-md-center">— MD Building Services —</p>
+     <h2 class="section-title section-title-mob mb-4 mb-md-5 text-center text-md-center"> Core Services</h2>
 
-    <div class="container px-md-0 px-3">
+    <div class="container  py-md-5">
         
         <!-- ZERO GAP ROW -->
         <div class="row text-center mt-4 mb-5 mb-md-4 g-1">
 
-            <div class="col-6 col-md-3">
-                <div class="service-box">
-                    <img src="assets/images/icon-structural-openings.svg" class="service-icon" alt="icon">
-                    <h5 class="service-title">Structural Openings</h5>
+            <div class="col-12 col-md-6">
+                <div class="service-box d-flex align-items-start">
+                    <img src="assets/images/icon-structural-openings.svg" class="service-icon mb-md-5 mb-4" alt="icon">
+                    <h5 class="service-title service-title-core service-title-core-mob ps-2">Structural Openings</h5>
+                    <div class="col-11 col-md-10"> 
+                    <p class="core-para text-start ps-2 pe-3">Specialists in major structural alterations, RSJs, load-bearing wall removal, basement structural work and forming new architectural spaces in homes, restaurants and commercial buildings.
+                    
+</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="col-6 col-md-3">
-                <div class="service-box">
-                    <img src="assets/images/icon-extensions.svg" class="service-icon" alt="icon">
-                    <h5 class="service-title">Extensions</h5>
+            <div class="col-12 col-md-6">
+                <div class="service-box d-flex align-items-start">
+                    <img src="assets/images/icon-extensions.svg" class="service-icon mb-md-5 mb-4" alt="icon">
+                    <h5 class="service-title service-title-core service-title-core-mob ps-2">Extensions</h5>
+                    <div class="col-11 col-md-10"> 
+                    <p class="core-para text-start ps-2 pe-3">Rear, side and multi-storey extensions across London, Bromley, Sevenoaks and Kent — designed for modern open-plan living, natural light and increased property value.</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="col-6 col-md-3">
-                <div class="service-box">
-                    <img src="assets/images/icon-kitchen-renovations.svg" class="service-icon" alt="icon">
-                    <h5 class="service-title">Kitchen Renovations</h5>
+            <div class="col-12 col-md-6">
+                <div class="service-box d-flex align-items-start">
+                    <img src="assets/images/icon-kitchen-renovations.svg" class="service-icon mb-md-5 mb-4" alt="icon">
+                    <h5 class="service-title service-title-core service-title-core-mob ps-2 ">Kitchen Renovations</h5>
+                    <div class="col-11 col-md-11"> 
+                     <p class="core-para text-start ps-2 pe-3">High-end kitchen design, installation, underfloor heating, open-plan knock-throughs, bespoke cabinetry and architectural glazing integration.</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="col-6 col-md-3">
-                <div class="service-box">
-                    <img src="assets/images/icon-full-property-refurbishment.svg" class="service-icon" alt="icon">
-                    <h5 class="service-title">Full Property Refurbishment</h5>
+            <div class="col-12 col-md-6">
+                <div class="service-box d-flex align-items-start">
+                    <img src="assets/images/icon-full-property-refurbishment.svg" class="service-icon mb-md-5 mb-4" alt="icon">
+                    <h5 class="service-title service-title-core service-title-core-mob ps-2">Full Property Refurbishment</h5>
+                    <div class="col-11 col-md-10"> 
+                    <p class="core-para text-start ps-2 pe-3">Complete luxury home transformations, reconfigurations, new bathrooms, flooring, re-wiring, plastering, rendering and premium finishes.</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="col-6 col-md-3 mb-0 mb-md-4">
-                <div class="service-box">
-                    <img src="assets/images/icon-landscaping.svg" class="service-icon" alt="icon">
-                    <h5 class="service-title">Landscaping</h5>
+            <div class="col-12 col-md-6 mb-0 mb-md-4">
+                <div class="service-box d-flex align-items-start">
+                    <img src="assets/images/icon-landscaping.svg" class="service-icon mb-md-5 mb-4" alt="icon">
+                    <h5 class="service-title service-title-core service-title-core-mob ps-2">Landscaping</h5>
+                    <div class="col-11 col-md-11"> 
+                    <p class="core-para text-start ps-2 pe-3">Porcelain paving, hard landscaping, sleeper walls, garden redesign, outdoor lighting and premium external upgrades.</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="col-6 col-md-3 mb-0 mb-md-4">
-                <div class="service-box">
-                    <img src="assets/images/icon-commercial-fit-outs.svg" class="service-icon" alt="icon">
-                    <h5 class="service-title">Commercial Fit-Outs</h5>
+            <div class="col-12 col-md-6 mb-0 mb-md-4">
+                <div class="service-box d-flex align-items-start">
+                    <img src="assets/images/icon-commercial-fit-outs.svg" class="service-icon mb-md-5 mb-4" alt="icon">
+                    <h5 class="service-title service-title-core service-title-core-mob ps-2">Commercial Fit-Outs</h5>
+                    <div class="col-11 col-md-11"> 
+                     <p class="core-para text-start ps-2 pe-3">Complete CAT A & CAT B fit-outs for offices, hospitality venues, retail spaces and commercial landlords across Central London and the South East.</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="col-6 col-md-3 mb-0 mb-md-4">
-                <div class="service-box">
-                    <img src="assets/images/icon-restaurant-refurbishments.svg" class="service-icon" alt="icon">
-                    <h5 class="service-title">Restaurant Refurbishments</h5>
+            <div class="col-12 col-md-6 mb-0 mb-md-5">
+                <div class="service-box d-flex align-items-start">
+                    <img src="assets/images/icon-restaurant-refurbishments.svg" class="service-icon mb-md-5 mb-4" alt="icon">
+                    <h5 class="service-title service-title-core service-title-core-mob ps-2">Restaurant Refurbishments</h5>
+                    <div class="col-11 col-md-11"> 
+                    <p class="core-para text-start ps-2 pe-3">Turnkey W1 hospitality projects including strip-outs, kitchen relocations, MEP upgrades, fire stopping, flooring, bar areas, and full back-of-house rebuilds.</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="col-6 col-md-3  mb-0 mb-md-4">
-                <div class="service-box">
-                    <img src="assets/images/icon-shopfitting.svg" class="service-icon" alt="icon">
-                    <h5 class="service-title">Shopfitting</h5>
+            <div class="col-12 col-md-6  mb-0 mb-md-5">
+                <div class="service-box d-flex align-items-start">
+                    <img src="assets/images/icon-shopfitting.svg" class="service-icon mb-md-5 mb-4" alt="icon">
+                    <h5 class="service-title service-title-core service-title-core-mob ps-2">Shopfitting</h5>
+                    <div class="col-11 col-md-10"> 
+                    <p class="core-para text-start ps-2">Precision joinery, interior transformations and branded shopfitting for restaurants, bars, cafés, retail and commercial spaces.</p>
+                    </div>
                 </div>
             </div>
 
@@ -205,7 +453,7 @@
         
 
     </div>
-<div class="button-sec text-center text-md-start">
+        <div class="button-sec text-center text-md-start pb-md-4">
             <a href="#footer" class="btn btn-primary px-4 py-2 sec-btn">
                 Contact Us
             </a>
@@ -213,39 +461,170 @@
 </div>
 
 
+<div id="makeus" class="makesus-section">
+    <div class="container bg-blue px-0">
+        <div class="row g-0 align-items-stretch">
 
-<div id="makeus" class="service-sec px-md-5 sbmb-2">
-    <div class="container">
-        <div class="row ptd4 ptm4 pbd4  align-items-center">
-             <div class="col-md-7 px-3">
-                    <p class="section-subtitle text-center text-md-start">— MD Building Services —</p>
-                    <h2 class="section-title mb-4 text-center text-md-start">What Makes Us Different</h2>
+            <!-- LEFT CONTENT BLOCK -->
+            <div class="col-md-6 left-box d-flex align-items-center">
+                <div class="inner-content px-4 px-md-2 py-5 mt-5">
 
-      <ul class="diff-text mb-5 custom-bullet px-3 px-md-0">
-    <li>Experienced in high-end residential</li>
-    <li>Trusted for Central London commercial works</li>
-    <li>Work under architects & contract administrators</li>
-    <li>Skilled in structural & technical construction</li>
-    <li>Clean, detail-driven finishing</li>
-    <li>Professional communication + management</li>
-</ul>
+                    <p class="section-subtitle text-white">— MD Building Services —</p>
 
+                    <h2 class="section-title text-white mb-4">
+                        What Makes<br>Us Different
+                    </h2>
 
+                    <ul class="diff-list text-white mb-4 mt-5">
+                        <li>Experienced in high-end residential construction, structural steelwork and full refurbishments.</li>
+                        <li>Proven delivery of complex commercial and hospitality projects in London.</li>
+                        <li>Trusted by clients for precision workmanship and clear communication.</li>
+                        <li>Skilled in MEP coordination, fire stopping and Building Control compliance.</li>
+                        <li>Detailed project planning and construction management from start to finish.</li>
+                        <li>Contractor working across London, Sevenoaks, Orpington, Bromley and Kent.</li>
+                    </ul>
 
-                   <div class="button-sec text-center text-md-start">
-                 <a href="#footer" class="btn btn-primary px-4 py-2 sec-btn">
-                    Contact Us
-                </a>
+                      <div class="button-sec text-center text-md-start pb-md-4 mt-5">
+            <a href="#footer" class="btn btn-primary px-4 py-2 sec-btn">
+                Contact Us
+            </a>
+        </div>
+
+                </div>
             </div>
-                </div>
 
-                <div class="col-md-5 text-end pt-5 pt-md-0 p-0">
-                    <img src="assets/images/home-makes-us-different.jpg" class="diff-img" alt="diff">
+            <!-- RIGHT IMAGE BLOCK -->
+            <div class="col-md-6 p-0">
+                <div class="right-image">
+                     <img src="assets/images/home-makes-us-different.jpg" class="diff-img" alt="diff">
                 </div>
+            </div>
+
         </div>
     </div>
 </div>
-    
+
+   
+<section class="featured-projects-section py-5 px-md-0 px-3">
+    <div class="container pt-5 pt-md-5">
+
+        <!-- Subtitle -->
+        <p class="section-subtitle text-center text-md-start">— MD Building Services —</p>
+
+        <!-- Main Title -->
+        <h2 class="section-title section-title-mob mb-5 mb-md-5 text-center text-md-start">Featured Projects</h2>
+
+        <!-- Projects Row -->
+        <div class="row g-md-1 g-3 justify-content-center mb-md-5 pb-md-5 pb-5">
+
+            <!-- Project 1 -->
+            <div class="col-md-4 col-sm-6 d-flex justify-content-center">
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="assets/images/featured-img.jpg" class="project-img" alt="Project">
+                        <div class="plus-icon"><img src="assets/images/plus.svg"></div>
+                    </div>
+                    <div class="project-title">Chinatown</div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="col-md-4 col-sm-6 d-flex justify-content-center">
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="assets/images/featured-img.jpg" class="project-img" alt="Project">
+                        <div class="plus-icon"><img src="assets/images/plus.svg"></div>
+                    </div>
+                    <div class="project-title">Carshalton</div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="col-md-4 col-sm-6 d-flex justify-content-center">
+                <div class="project-card">
+                    <div class="project-img-wrapper">
+                        <img src="assets/images/featured-img.jpg" class="project-img" alt="Project">
+                        <div class="plus-icon"><img src="assets/images/plus.svg"></div>
+                    </div>
+                    <div class="project-title">Bifold Garden</div>
+                </div>
+            </div>
+
+        </div>
+
+     <div class="button-sec text-center text-md-center pb-md-4">
+            <a href="#footer" class="btn btn-primary px-4 py-2 sec-btn">
+                View ur Porfolio
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="faq-section">
+    <div class="container faq-container">
+
+         <h2 class="section-title section-title-mob mb-4 mb-md-5 text-center text-md-start">Frequently Asked Questions</h2>
+
+        <div class="faq-list pb-5">
+
+            <div class="faq-item ">
+                <button class="faq-question">
+                    Mauris at erat vitae tellus faucibus a vestibulum arcu?
+                    <span class="faq-icon"><img src="assets/images/plus-1.svg"></span>
+                </button>
+                 <div class="faq-answer">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, iusto.
+    </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Mauris at erat vitae tellus faucibus a vestibulum arcu?
+                    <span class="faq-icon"><img src="assets/images/plus-1.svg"></span>
+                </button>
+                 <div class="faq-answer">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, iusto.
+    </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                  Mauris at erat vitae tellus faucibus a vestibulum arcu?
+                    <span class="faq-icon"><img src="assets/images/plus-1.svg"></span>
+                </button>
+                 <div class="faq-answer">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, iusto.
+    </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                   Mauris at erat vitae tellus faucibus a vestibulum arcu?<span>
+                     <span class="faq-icon"><img src="assets/images/plus-1.svg"></span>
+                </button>
+                 <div class="faq-answer">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, iusto.
+    </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Mauris at erat vitae tellus faucibus a vestibulum arcu?
+                    <span class="faq-icon"><img src="assets/images/plus-1.svg"></span>
+                </button>
+                 <div class="faq-answer">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, iusto.
+    </div>
+            </div>
+
+        </div>
+
+      <div class="text-center mt-4">
+            <a href="#" class="btn btn-primary px-4 py-2 sec-btn ">VIEW All FAQ'S</a>
+        </div>
+
+    </div>
+</section>
 
 
 <section class="locations-section px-3">
@@ -257,14 +636,14 @@
         </div>
 
         <!-- Main Title -->
-          <h2 class="section-title mb-4 text-center text-md-start"> Locations We Cover</h2>
+          <h2 class="section-title section-title-mob mb-4 text-center text-md-start"> Locations We Cover</h2>
        
 
-        <div class="row">
+        <div class="row ">
 
             <!-- Column 1 -->
-            <div class="col-md-4 mb-4">
-                <ul>
+            <div class="col-md-4 mb-md-4 mb-0">
+                <ul class="my-list">
                     <li>Sevenoaks</li>
                     <li>Bromley</li>
                     <li>Locksbottom</li>
@@ -276,8 +655,8 @@
             </div>
 
             <!-- Column 2 -->
-            <div class="col-md-4 mb-4">
-                <ul>
+            <div class="col-md-4 mb-md-4 mb-0">
+                <ul class="my-list">
                     <li>Tunbridge Wells</li>
                     <li>Biggin Hill</li>
                     <li>West Wickham</li>
@@ -289,8 +668,8 @@
             </div>
 
             <!-- Column 3 -->
-            <div class="col-md-4 mb-4">
-                <ul>
+            <div class="col-md-4 mb-md-4 mb-0">
+                <ul class="my-list">
                     <li>Maidstone</li>
                     <li>Bearstead</li>
                     <li>Kings Hill</li>
@@ -305,63 +684,6 @@
     </div>
 </section>
 
-   <section class="faq-section py-5">
-  <div class="container text-center">
-      <h2 class="faq-title mb-4">Frequently Asked Questions</h2>
-
-      <div class="accordion faq-accordion" id="faqAccordion">
-
-          <div class="accordion-item">
-              <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#faqItem1">
-                      Mauris at erat vitae tellus faucibus a vestibulum arcu?
-                  </button>
-              </h2>
-              <div id="faqItem1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                  <div class="accordion-body">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </div>
-              </div>
-          </div>
-
-          <div class="accordion-item">
-              <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#faqItem2">
-                      Lorem ipsum dolor sit amet vitae tellus faucibus erat etc?
-                  </button>
-              </h2>
-              <div id="faqItem2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                  <div class="accordion-body">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </div>
-              </div>
-          </div>
-
-          <div class="accordion-item">
-              <h2 class="accordion-header">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#faqItem3">
-                      Erat vitae tellus faucibus a vestibulum arcu?
-                  </button>
-              </h2>
-              <div id="faqItem3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                  <div class="accordion-body">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </div>
-              </div>
-          </div>
-
-      </div>
-
-       <div class="button-sec text-center mt-4 px-4">
-            <a href="#footer" class="btn btn-primary px-4 py-2 sec-btn">
-                 VIEW ALL FAQS
-            </a>
-        </div>
-  </div>
-</section>
 
  
      
@@ -370,7 +692,7 @@
     <div class="container">
 
         <p class="section-subtitle text-white  ptd4 ptm4">— MD Building Services —</p>
-        <h2 class="section-title mb-4 text-white">Testimonial</h2>
+        <h2 class="section-title section-title-mob mb-4 text-white">Testimonial</h2>
 
         <div class="row justify-content-center pbd4 pbm4 pt-4 pt-md-0">
             <div class="col-lg-8 position-relative">
@@ -432,6 +754,9 @@
                     
 
                 </div><!-- slider end -->
+                 <div class="text-center mt-4 d-block d-md-none">
+            <a href="#" class="btn btn-primary px-4 py-2 sec-btn ">VIEW All FAQ'S</a>
+        </div>
 
             </div>
         </div>
@@ -443,77 +768,123 @@
 
 
 
-   
+<style>
+    /* FOOTER LINK STYLE */
+    .footer-links a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 400;
+        transition: 0.3s ease;
+    }
 
+    .footer-links a:hover {
+        color: #ffffff;
+        text-decoration: underline;
+    }
+</style>
 
+<footer id="footer" class="footer-section pt-5">
 
-    <footer id="footer" class="footer-section">
+    <div class="container pt-5 pb-5 mt-md-5">
 
-    <div  class="container">
+        <!-- MAIN ROW -->
+        <div class="row align-items-start justify-content-between">
 
-        <div class="text-center">
-            <p class="footer-subtitle">— MD Building Services —</p>
-            <h2 class="footer-title text-white">Contact</h2>
-        </div>
+            <!-- LEFT SIDE -->
+            <div class="col-md-8 col-12 text-md-start text-center mb-5">
 
-       <!-- ROW -->
-<div class="row footer-contact justify-content-center pb-md-5 pb-0">
+                <!-- LOGO (CENTER ON MOBILE, LEFT ON DESKTOP) -->
+                <div class="mb-5 d-flex justify-content-md-start justify-content-center">
+                    <img src="assets/images/md-building-services-logo-white.svg"
+                         alt="MD Building Services"
+                         style="max-width:220px;">
+                </div>
 
-    <div class="col-md-3 col-12 text-md-start text-center mb-4">
-        <span>Call</span>
-        <p>
-            <a href="tel:07841409061" class=" text-white">
-                07841 409 061
-            </a>
-        </p>
-    </div>
+                <!-- MENUS -->
+                <div class="row px-3 px-md-0">
 
-    <div class="col-md-3 col-12 text-md-start text-center mb-4 ps-md-5 ms-md-5">
-        <span>Email</span>
-        <p>
-            <a href="mailto:mark@mdbuildingservices.co.uk" class=" text-white">
-                mark@mdbuildingservices.co.uk
-            </a>
-        </p>
-    </div>
-
+                    <!-- MENU 1 -->
+                    <div class="col-md-4 col-6 text-md-start text-start">
+    <ul class="list-unstyled footer-links text-md-start text-start">
+        <li class="mb-2"><a href="#">Home</a></li>
+        <li  class="mb-2"><a href="#">About</a></li>
+        <li class="mb-2"><a href="#">Residential</a></li>
+        <li class="mb-2"><a href="#">Commercial</a></li>
+        <li class="mb-2"><a href="#">Portfolio</a></li>
+        <li class="mb-2"><a href="#">Contact</a></li>
+    </ul>
 </div>
 
-       <!-- Social Icons Row -->
-        <div class="row justify-content-center py-md-3 py-0">
-            <div class="col-auto footer-social">
-                <img src="assets/images/icon-social-twitter.svg">
-                <img src="assets/images/icon-social-linked-in.svg">
-                <img src="assets/images/icon-social-instagram.svg">
-            </div>
-        </div>
 
-        <!-- Logo Row -->
-        <div class="row justify-content-center mt-4 py-md-3 py-3">
-            <div class="col-auto footer-logo">
-                <img src="assets/images/md-building-services-logo-white.svg">
+                    <!-- MENU 2 -->
+                   <div class="col-6 text-md-start text-start">
+    <ul class="list-unstyled footer-links text-md-start text-start">
+                            <li class="mb-2"><a href="#">Privacy Policy</a></li>
+                            <li class="mb-2"><a href="#">Cookies Policy</a></li>
+                            <li class="mb-2"><a href="#">Terms of Use</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+
             </div>
+
+            <!-- RIGHT SIDE -->
+            <div class="col-md-4 col-12 text-md-start text-center">
+
+                <!-- SOCIAL ICONS (HORIZONTAL ALWAYS) -->
+                <div class="d-flex justify-content-md-start justify-content-center mb-5">
+                    <img src="assets/images/icon-social-twitter.svg" class="me-3" alt="">
+                    <img src="assets/images/icon-social-instagram.svg" class="me-3" alt="">
+                    <img src="assets/images/icon-social-linked-in.svg" alt="">
+                </div>
+
+                <!-- EMAIL -->
+                <p class="fw-bold text-white mb-1">Email</p>
+                <p class="mb-3">
+                    <a href="mailto:mark@mdbuildingservices.co.uk" class="text-white">
+                        mark@mdbuildingservices.co.uk
+                    </a>
+                </p>
+
+                <!-- CALL -->
+                <p class="fw-bold text-white mb-1">Call</p>
+                <p>
+                    <a href="tel:07841409061" class="text-white">
+                        07841 409 061
+                    </a>
+                </p>
+
+            </div>
+
         </div>
 
     </div>
 
-    <!-- Footer Bottom -->
-    <div class="footer-bottom text-center mt-4 ">
-        <div class="container py-md-5 py-5 ">
-              <p>©2025 MD Building Services</p>
-        <p>All Rights Reserved</p>
-        
-        </div>
-        <p class="web_credit pb-3">
-    <a href="https://www.otheralias.com/" target="_blank" class=" text-white">
-        Website By Other Alias
-    </a>
-</p>
+<!-- FOOTER BOTTOM -->
+<div class="footer-bottom text-center py-5" style="background:#072046;">
+    
+    <p class="text-white mb-1">©2025 MD Building Services</p>
 
-      
-    </div>
+    <p class="text-white mb-1 w-75 mx-auto d-md-block d-none">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in arcu ipsum. 
+        Phasellus tincidunt diam in enim tempor, in posuere nisl iaculis.
+    </p>
+    <p class="text-white mb-md-1 mb-2 w-75 mx-auto d-md-none d-block">
+       All Rights Reserved
+    </p>
+
+    <p class="web_credit pt-3 mb-0">
+        <a href="https://www.otheralias.com/" class="text-white" target="_blank">
+            Website By Other Alias
+        </a>
+    </p>
+
+</div>
 
 </footer>
+
+
 
 
 
@@ -602,6 +973,27 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 </script>
+
+
+<script>
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+        item.querySelector('.faq-question').addEventListener('click', () => {
+
+            // CLOSE all first
+            faqItems.forEach(i => {
+                if (i !== item) {
+                    i.classList.remove('active');
+                }
+            });
+
+            // TOGGLE clicked one
+            item.classList.toggle('active');
+        });
+    });
+</script>
+
 
 
 </body>

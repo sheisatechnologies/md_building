@@ -77,7 +77,7 @@ a.btn {
 .hero-head{
     text-transform: capitalize !important;
     max-width: 540px;
-    color: #28488A;
+    color: white;
     font-size: 50px;
     line-height: 56px;
     font-weight: 450;
@@ -119,8 +119,8 @@ a.btn {
         }
 
              .service-box {
-    border: 1px solid #C5D7EB;
-    padding: 40px 16px; /* ⬅️ Increased Y padding (was 22px) */
+    /* border: 1px solid #C5D7EB; */
+    /* ⬅️ Increased Y padding (was 22px) */
     border-radius: 8px;
     transition: 0.3s ease;
     height: 100%;
@@ -360,9 +360,9 @@ footer .footer-bottom {
                 line-height: 22px;
             }
 
-            .service-box {
+            /* .service-box {
                 padding: 18px;
-            }
+            } */
 
             .different-section {
                 padding-top: 80px;
