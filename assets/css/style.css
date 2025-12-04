@@ -604,6 +604,7 @@ footer .footer-bottom {
     letter-spacing: 2px;
     font-weight: 500;
      font-family: 'Circular Book', Helvetica, Arial, sans-serif;
+     border: none;
 }
 
 .sec-btn:hover{
