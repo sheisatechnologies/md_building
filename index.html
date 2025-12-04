@@ -183,10 +183,10 @@
     position: relative;
 }
 .diff-list li::before {
-    content: "•";
+    content: "_";
     position: absolute;
-    left: 0;
-    top: 0;
+    left: -6px;
+    top: -12px;
     font-size: 22px;
     color: #fff;
 }
@@ -198,20 +198,21 @@
     background-position: center right;
     width: 100%;
     height: 100%;
-    min-height: 500px;
+    
 }
 
-/* RESPONSIVE FIX */
+
 @media (max-width: 767px) {
     .right-image {
-        height: 300px;
+        min-height: 300px;   /* smaller height */
+        background-position: center center; /* centre for mobile */
     }
 }
 
 .custom-btn {
     width: 253px;
     height: 53px;
-    background-color: white !important;
+    background-color: #fff !important;
     color: #28488A !important;
      /* optional: add border for style */
     display: flex;
@@ -222,7 +223,7 @@
 }
 
 .custom-btn:hover {
-    background-color: blue !important;
+    background-color: #D4DAE8 !important;
     color: white !important;
 }
 .bg-white{
@@ -263,20 +264,20 @@
 .navbar.scrolled .logo-blue { display: block; }
 
 
+
+
 </style>
+
+
 </head>
 <body>
 
- <nav class="navbar navbar-expand-lg navbar-light fixed-top  px-md-5 px-3">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top px-md-5 px-3">
     <div class="container pt-md-4 pt-3 py-3">
 
         <!-- LOGO -->
         <a class="navbar-brand" href="index.html">
-            
-            <!-- BLUE LOGO (default) -->
             <img class="logo-blue" src="assets/images/md-building-services-logo-blue.svg" alt="MD Building Services">
-
-            <!-- WHITE LOGO (mobile menu open) -->
             <img class="logo-white" src="assets/images/md-building-services-logo-white.svg" alt="MD Building Services">
         </a>
 
@@ -288,32 +289,48 @@
             <span class="toggler-icon bottom-bar"></span>
         </button>
 
-        <!-- MOBILE MENU -->
+        <!-- MENU -->
         <div class="collapse navbar-collapse mobile-menu" id="navbarCollapse">
             <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+
+                <!-- HOME -->
                 <li class="nav-item">
-                    <a class="nav-link mobile-link" href="index.html">HOME</a>
+                    <a class="nav-link mobile-link active" href="index.html"><span>HOME</span></a>
                 </li>
+ <!-- About-->
                 <li class="nav-item">
-                    <a class="nav-link mobile-link" href="about.html">ABOUT</a>
+                    <a class="nav-link mobile-link " href="about.html"><span>About</span></a>
                 </li>
+                
+
+
+                <!-- RESIDENTIAL -->
                 <li class="nav-item">
-                    <a class="nav-link mobile-link" href="residential.html">RESIDENTIAL</a>
+                    <a class="nav-link mobile-link" href="residential.html"><span>RESIDENTIAL</span></a>
                 </li>
+
+                <!-- COMMERCIAL -->
                 <li class="nav-item">
-                    <a class="nav-link mobile-link" href="commercial.html">COMMERCIAL</a>
+                    <a class="nav-link mobile-link " href="commercial.html"><span>COMMERCIAL</span></a>
                 </li>
+
+                <!-- PORTFOLIO  -->
+               <li class="nav-item">
+                    <a class="nav-link mobile-link" href="portfolio.html"><span>Portfolio</span></a>
+                </li>
+
+                <!-- CONTACT -->
                 <li class="nav-item">
-                    <a class="nav-link mobile-link" href="portfolio.html">PORTFOLIO</a>
+                    <a class="nav-link mobile-link" href="contact.html"><span>CONTACT</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link mobile-link" href="contact.html">CONTACT</a>
-                </li>
+
             </ul>
         </div>
 
     </div>
 </nav>
+
+
 
 
    <div class="nav-spacer d-block d-md-none"></div>
@@ -341,7 +358,7 @@
                         Precision construction, structural expertise...
                     </p>
                       <div class="button-sec text-center text-md-start pb-md-4 mt-5">
-            <a href="#footer" class="btn btn-primary px-4 py-2 sec-btn bg-white">
+            <a href="#footer" class="btn btn-primary px-4 py-2 sec-btn sec-btn-white">
                  VIEW OUR PORTFOLIO
             </a>
             </div>
@@ -400,7 +417,7 @@
         <!-- ZERO GAP ROW -->
         <div class="row text-center mt-4 mb-5 mb-md-4 g-1">
 
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 mb-5">
                 <div class="service-box d-flex align-items-start">
                     <img src="assets/images/icon-structural-openings.svg" class="service-icon mb-md-5 mb-4" alt="icon">
                     <h5 class="service-title service-title-core service-title-core-mob ps-2">Structural Openings</h5>
@@ -412,7 +429,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 mb-5">
                 <div class="service-box d-flex align-items-start">
                     <img src="assets/images/icon-extensions.svg" class="service-icon mb-md-5 mb-4" alt="icon">
                     <h5 class="service-title service-title-core service-title-core-mob ps-2">Extensions</h5>
@@ -422,7 +439,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 mb-5">
                 <div class="service-box d-flex align-items-start">
                     <img src="assets/images/icon-kitchen-renovations.svg" class="service-icon mb-md-5 mb-4" alt="icon">
                     <h5 class="service-title service-title-core service-title-core-mob ps-2 ">Kitchen Renovations</h5>
@@ -432,7 +449,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 mb-5">
                 <div class="service-box d-flex align-items-start">
                     <img src="assets/images/icon-full-property-refurbishment.svg" class="service-icon mb-md-5 mb-4" alt="icon">
                     <h5 class="service-title service-title-core service-title-core-mob ps-2">Full Property Refurbishment</h5>
@@ -442,7 +459,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-md-6 mb-0 mb-md-4">
+            <div class="col-12 col-md-6 mb-5 mb-md-4">
                 <div class="service-box d-flex align-items-start">
                     <img src="assets/images/icon-landscaping.svg" class="service-icon mb-md-5 mb-4" alt="icon">
                     <h5 class="service-title service-title-core service-title-core-mob ps-2">Landscaping</h5>
@@ -452,7 +469,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-md-6 mb-0 mb-md-4">
+            <div class="col-12 col-md-6 mb-5 mb-md-4">
                 <div class="service-box d-flex align-items-start">
                     <img src="assets/images/icon-commercial-fit-outs.svg" class="service-icon mb-md-5 mb-4" alt="icon">
                     <h5 class="service-title service-title-core service-title-core-mob ps-2">Commercial Fit-Outs</h5>
@@ -462,7 +479,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-md-6 mb-0 mb-md-5">
+            <div class="col-12 col-md-6 mb-5 mb-md-5">
                 <div class="service-box d-flex align-items-start">
                     <img src="assets/images/icon-restaurant-refurbishments.svg" class="service-icon mb-md-5 mb-4" alt="icon">
                     <h5 class="service-title service-title-core service-title-core-mob ps-2">Restaurant Refurbishments</h5>
@@ -472,7 +489,7 @@
                 </div>
             </div>
 
-            <div class="col-12 col-md-6  mb-0 mb-md-5">
+            <div class="col-12 col-md-6  mb-5 mb-md-5">
                 <div class="service-box d-flex align-items-start">
                     <img src="assets/images/icon-shopfitting.svg" class="service-icon mb-md-5 mb-4" alt="icon">
                     <h5 class="service-title service-title-core service-title-core-mob ps-2">Shopfitting</h5>
@@ -487,7 +504,7 @@
         
 
     </div>
-        <div class="button-sec text-center text-md-start pb-md-4">
+             <div class="button-sec text-center text-md-center pb-md-4">
             <a href="#footer" class="btn btn-primary px-4 py-2 sec-btn">
                 Contact Us
             </a>
@@ -496,11 +513,11 @@
 
 
 <div id="makeus" class="makesus-section">
-    <div class="container bg-blue px-0">
+    <div class="container  px-0">
         <div class="row g-0 align-items-stretch">
 
             <!-- LEFT CONTENT BLOCK -->
-            <div class="col-md-6 left-box d-flex align-items-center">
+            <div class="col-md-5 left-box d-flex align-items-center">
                 <div class="inner-content px-4 px-md-2 py-5 mt-5">
 
                     <p class="section-subtitle text-white">— MD Building Services —</p>
@@ -519,7 +536,7 @@
                     </ul>
 
                       <div class="button-sec text-center text-md-start pb-md-4 mt-5">
-            <a href="#footer" class="btn btn-primary px-4 py-2 sec-btn">
+            <a href="#footer" class="btn btn-primary sec-btn-white px-4 py-2 sec-btn">
                 Discover more
             </a>
         </div>
@@ -528,7 +545,7 @@
             </div>
 
             <!-- RIGHT IMAGE BLOCK -->
-            <div class="col-md-6 p-0">
+            <div class="col-md-6 offset-md-1 p-0">
                 <div class="right-image">
                      <img src="assets/images/home-makes-us-different.jpg" class="diff-img" alt="diff">
                 </div>
@@ -555,7 +572,7 @@
             <div class="col-md-4 col-sm-6 d-flex justify-content-center">
                 <div class="project-card">
                     <div class="project-img-wrapper">
-                        <img src="assets/images/featured-img.jpg" class="project-img" alt="Project">
+                        <img src="assets/images/features_img1.jpg" class="project-img" alt="Project">
                         <div class="plus-icon"><img src="assets/images/plus.svg"></div>
                     </div>
                     <div class="project-title">Chinatown</div>
@@ -566,7 +583,7 @@
             <div class="col-md-4 col-sm-6 d-flex justify-content-center">
                 <div class="project-card">
                     <div class="project-img-wrapper">
-                        <img src="assets/images/featured-img.jpg" class="project-img" alt="Project">
+                        <img src="assets/images/features_img1.jpg" class="project-img" alt="Project">
                         <div class="plus-icon"><img src="assets/images/plus.svg"></div>
                     </div>
                     <div class="project-title">Carshalton</div>
@@ -577,7 +594,7 @@
             <div class="col-md-4 col-sm-6 d-flex justify-content-center">
                 <div class="project-card">
                     <div class="project-img-wrapper">
-                        <img src="assets/images/featured-img.jpg" class="project-img" alt="Project">
+                        <img src="assets/images/features_img3.jpg" class="project-img" alt="Project">
                         <div class="plus-icon"><img src="assets/images/plus.svg"></div>
                     </div>
                     <div class="project-title">Bifold Garden</div>
@@ -662,7 +679,7 @@
 
 
 <section class="locations-section px-3 py-5">
-    <div class="container pt-5 pt-md-0 py-5 mt-5">
+    <div class="container pt-5  py-5 mt-5 mb-5">
 
         <!-- Subtitle -->
         <div class="text-md-start text-center mb-2 mt-5">
@@ -738,7 +755,7 @@
                 <img src="assets/images/quote-mark-right.svg" alt="quote" class="quote-right">
 
                 <!-- Slick Slider -->
-                <div class="testimonial-slider py-md-4 py-5">
+                <div class="testimonial-slider py-md-4 py-5 mb-md-4">
 
                     <div class="testimonial-slide">
                         <p class="testimonial-text px-5">
@@ -788,8 +805,10 @@
                     
 
                 </div><!-- slider end -->
-                 <div class="text-center mt-4 d-block d-md-none">
-            <a href="#" class="btn btn-primary px-4 py-2 sec-btn ">VIEW All FAQ'S</a>
+                      <div class="button-sec text-center text-md-center pb-md-4">
+            <a href="#footer" class="btn btn-primary px-4 py-2 sec-btn">
+                Read More
+            </a>
         </div>
 
             </div>

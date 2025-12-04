@@ -611,9 +611,9 @@ footer .footer-bottom {
     line-height: 12px;
     letter-spacing: 2px;
     font-weight: 500;
-    background-color: #DFEAF2;
+    background-color: #D4DAE8;
     color: #001429;
-    border-color: #DFEAF2;
+    border-color: #D4DAE8;
 }
 
 .diff-text{
@@ -1436,9 +1436,9 @@ h2 {
     font-size: 20px;
 }
 
-a:hover {
+/* a:hover {
     opacity: 0.7;
-}
+} */
 
 i {
     font-size: 22px;
@@ -1532,3 +1532,76 @@ i {
     width: 30.69px;
 }
 }
+
+
+.sec-btn-white:hover {
+    padding: 18px 39px !important;
+    font-size: 13px;
+    line-height: 12px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    background-color: #D4DAE8;
+    color: #001429;
+    border-color: #D4DAE8;
+}
+
+@media (max-width: 991px) {
+    .navbar-nav .dropdown-menu {
+        border: none;
+        background: transparent;
+        padding-left: 15px;
+    }
+
+    .navbar-nav .dropdown-item {
+        color: #fff !important;
+        padding-left: 10px;
+    }
+}
+/* Bigger nav buttons */
+.navbar-nav .nav-link,
+.navbar-nav .dropdown-toggle {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 14px 20px;
+    display: inline-block;
+}
+
+/* Wrap span relative for underline */
+.navbar-nav .nav-link span,
+.navbar-nav .dropdown-toggle span {
+    position: relative;
+    display: inline-block;
+}
+
+.navbar-nav .nav-link.active span,
+.navbar-nav .dropdown-toggle.active span {
+    color: #A9B6D0;
+}
+
+/* Active link underline exactly under text */
+.navbar-nav .nav-link.active span::after,
+.navbar-nav .dropdown-toggle.active span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px; /* distance from text */
+    width: 100%;   /* matches text width */
+    height: 2px;
+    background-color: #A9B6D0; /* underline color */
+    border-radius: 10px;
+}
+
+/* Smooth hover underline animation */
+.navbar-nav .nav-link span::after,
+.navbar-nav .dropdown-toggle span::after {
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover span::after,
+.navbar-nav .dropdown-toggle:hover span::after {
+    width: 100%;
+}
+
+
+
+
