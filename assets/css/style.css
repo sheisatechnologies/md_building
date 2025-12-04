@@ -424,7 +424,7 @@ footer .footer-bottom {
                 font-size: 28px;
                 line-height: 36px;
                 font-weight: 600;
-                color: #28488A;
+                color: #fff;
                 margin-bottom: 15px;
             }
 
@@ -460,6 +460,7 @@ footer .footer-bottom {
 
             .hero-section {
                 text-align: center;
+                margin-top: -67px;
             }
         }
 @media (max-width: 576px) {
