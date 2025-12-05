@@ -63,6 +63,86 @@
             text-align: center;
         }
     }
+
+    /* .intro-image-wrap  {
+    width: 100%;
+    text-align: center;
+    margin-top: 60px;
+     height: auto;
+    position: absolute;
+     margin-top: -75px;  
+    z-index: 50;
+} */
+
+ /* DESKTOP IMAGE HALF OUTSIDE (BOTTOM) */
+.intro-image-wrap.d-md-block {
+    position: relative;
+}
+
+.intro-image-wrap.d-md-block .intro-image {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: -120px; /* কতটুকু নিচে বের হবে সেটি এখানে control */
+    left: 0;
+}
+
+/* container যেন image overlap হতে পারে */
+.intro-block-resi .container {
+    position: relative;
+    overflow: visible !important;
+}
+
+
+/* DESKTOP (Everything fixed inside container) */
+@media (min-width: 768px) {
+
+    .intro-block-resi .container {
+        position: relative;
+        overflow: visible !important;
+    }
+
+    .intro-block-resi .intro-image-wrap.d-md-block {
+        position: absolute;
+        bottom: -29rem;    /* কতটা নিচে overlap করবে */
+        left: 66%;
+        transform: translateX(-50%);
+           /* Image same size */
+        text-align: center;
+        z-index: 3;
+    }
+
+    .intro-block-resi .intro-image-wrap.d-md-block .intro-image {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* Paragraph under desktop image */
+    .intro-block-resi .intro-image-wrap.d-md-block .second-desk-text {
+        font-size: 16px;
+        margin-top: 15px;
+        color: #333;
+    }
+}
+
+/* MOBILE NORMAL */
+@media (max-width: 767px) {
+
+    .intro-block-resi .intro-image-wrap.d-md-block {
+        position: static !important;
+        transform: none !important;
+        bottom: auto !important;
+        width: 100% !important;
+    }
+
+    .intro-block-resi .intro-image-wrap.d-block img {
+        width: 100%;
+    }
+}
+
+
+
 </style>
 </head>
 <body>
@@ -92,7 +172,7 @@
                 <li class="nav-item">
                     <a class="nav-link mobile-link" href="index.html"><span>HOME</span></a>
                 </li>
-               <!-- RESIDENTIAL -->
+ <!-- RESIDENTIAL -->
                 <li class="nav-item">
                     <a class="nav-link mobile-link " href="about.html"><span>About</span></a>
                 </li>
@@ -101,7 +181,7 @@
 
                 <!-- RESIDENTIAL -->
                 <li class="nav-item">
-                    <a class="nav-link mobile-link" href="residential.html"><span>RESIDENTIAL</span></a>
+                    <a class="nav-link mobile-link active" href="residential.html"><span>RESIDENTIAL</span></a>
                 </li>
 
                 <!-- COMMERCIAL -->
@@ -116,7 +196,7 @@
 
                 <!-- CONTACT -->
                 <li class="nav-item">
-                    <a class="nav-link mobile-link active" href="contact.html"><span>CONTACT</span></a>
+                    <a class="nav-link mobile-link" href="contact.html"><span>CONTACT</span></a>
                 </li>
 
             </ul>
@@ -125,136 +205,196 @@
     </div>
 </nav>
 
+
+
     <div class="nav-spacer"></div>
-  
 
-<section class="py-5 px-3 px-md-0 mt-4 mt-md-0 pd-md-0" style="background:#031A2E;">
-  <div class="container py-5">
-    
-    <!-- Title -->
-    <h2 class="text-white section-title section-title-con mb-5 pb-3 mt-5">Contact</h2>
+<!-- <div class="container pmobile">
+    <div class="row">
+        <div class="col-lg-12 hero-wrapper pt-3">
+            
+            <img src="assets/images/hero-image-desktop.jpg" 
+                 alt="MD Building Services" 
+                 class="img-fluid w-100 hero-image d-none d-md-block">
+                 <img src="assets/images/hero-image-mobile.jpg" 
+                 alt="MD Building Services" 
+                 class="img-fluid w-100 hero-image d-block d-md-none">
 
-    <div class="row justify-content-between align-items-start">
+            <div class="hero-content text-white mt-5 mt-md-4">
+                <h2 class="hero-head hero-head-mob pt-md-2 pt-5 mt-5 mt-md-0 px-2 px-md-0 pb-md-5 pb-0">
+                   High-End Residential & Commercial Contractor Serving London & the South East.
 
-      <!-- Left Column -->
-      <div class="col-md-7">
+                </h2>
 
-        <!-- Email -->
-        <div class="mb-md-4 mb-5">
-          <small class="text-white small-con">Email Mark</small>
-          <div class="d-flex align-items-center gap-3 mt-2">
-            <img src="assets/images/email1.svg" class="icon" alt="email">
-            <a href="mailto:mark@mdbuildingservices.co.uk" class="text-white contact-txt text-decoration-none">
-              mark@mdbuildingservices.co.uk
-            </a>
-          </div>
+                <p class="hero-para hero-para-mob mb-md-5 px-3 px-md-0 mt-4 d-block d-md-none">
+                Precision construction, structural expertise and
+                    professional project management for luxury home
+                    renovations, extensions, restaurant fit-outs,
+                    commercial refurbishments and architect-led developments.
+
+                </p>
+
+                <div class="button-sec button-sec-hero text-center text-md-start pt-3">
+                 <a href="#footer" class="btn btn-primary px-4 py-2 sec-btn">
+                    Contact Us
+                </a>
+            </div>
+            </div>
+
+        </div>
+    </div>
+</div> -->
+
+<section class="intro-block-resi mt-4 mt-md-0">
+    <div class="container py-5 px-2">
+
+        <div class="intro-content">
+            <img src="assets/images/plus-icon.svg" class="intro-plus pt-5 mt-4 pb-5 ps-md-2" alt="+">
+
+            <p class="intro-description pb-5 mb-md-4 mb-0 px-3 px-md-2">
+                Complete CAT A & CAT B fit-outs for offices,
+                hospitality venues, retail spaces and
+                commercial landlords across Central London
+                and the South East.
+            </p>
+
+            <div class="button-sec text-center text-md-start button-sec-hero pb-4 ps-md-2">
+                <a href="#footer" class="btn btn-primary px-4 py-2 sec-btn sec-btn-white">
+                    View Our Portfolio
+                </a>
+            </div>
         </div>
 
-        <!-- Phone -->
-        <div class="mb-md-5 md-3 pb-md-3">
-          <small class="text-white small-con">Call Mark</small>
-          <div class="d-flex align-items-center gap-3 mt-2">
-            <img src="assets/images/phone.svg" class="icon" alt="phone">
-            <a href="tel:07841409061" class="text-white contact-txt text-decoration-none">
-              07841 409 061
-            </a>
-          </div>
+        <!-- Desktop Image + Paragraph -->
+        <div class="intro-image-wrap d-md-block d-none">
+            <img src="assets/images/resi-hero.jpg" class="intro-image" alt="">
+            <p class="second-desk-text mt-3">Maecenas dapibus dignissim quam nec dictum</p>
         </div>
 
-        <!-- Footer Text -->
-        <p class="text-white con-bottom mt-4 d-md-block d-none">
-          MD Building Services (Maidstone) Ltd<br>
-         <span class="con-span">High-End Residential & Commercial Contractor<br>
-          Serving London, Sevenoaks, Orpington, Bromley, Chislehurst, Kent & the South East</span> 
+        <!-- Mobile Image -->
+        <div class="intro-image-wrap d-block d-md-none pt-5">
+            <img src="assets/images/hero-commer-mob.jpg" class="intro-image" alt="">
+        </div>
+
+        <!-- Mobile Paragraph -->
+        <p class="second-desk-text second-desk-text-left text-center mt-3 d-block d-md-none">
+            Maecenas dapibus dignissim quam nec dictum
         </p>
 
-      </div>
-
-      <!-- Right Column -->
-      <div class="col-md-4 text-md-end mt-5 mt-md-0">
-        <small class="text-white small-con d-block mb-3 pe-5 me-5">Follow MD Building Services</small>
-
-        <div class="d-flex gap-4 justify-content-md-end justify-content-start">
-        
-                    <img src="assets/images/social-fb.svg" class="me-3 social-icn" alt="">
-                   
-                    <img src="assets/images/social-linkdin.svg" class="me-3 social-icn" alt="">
-                     <img src="assets/images/social-insta.svg" class="me-3 social-icn" alt="">
-                      <img src="assets/images/social.svg" class="me-3 social-icn" alt="">
-              
-
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-
-<section class="locations-section px-3">
-    <div class="container pt-md-5 pt-0 pt-md-0">
-
-        <!-- Subtitle -->
-        <div class="text-md-start text-center mb-2">
-           <p class="section-subtitle text-center text-md-start">— MD Building Services —</p>
-        </div>
-
-        <!-- Main Title -->
-          <h2 class="section-title section-title-mob mb-4 text-center text-md-start"> Locations We Cover</h2>
-       
-
-        <div class="row mt-5">
-
-            <!-- Column 1 -->
-            <div class="col-md-4 mb-md-4 mb-0">
-                <ul class="my-list">
-                    <li>Sevenoaks</li>
-                    <li>Bromley</li>
-                    <li>Locksbottom</li>
-                    <li>Keston</li>
-                    <li>Beckenham</li>
-                    <li>Chislehurst</li>
-                    <li>Tonbridge</li>
-                </ul>
-            </div>
-
-            <!-- Column 2 -->
-            <div class="col-md-4 mb-md-4 mb-0">
-                <ul class="my-list">
-                    <li>Tunbridge Wells</li>
-                    <li>Biggin Hill</li>
-                    <li>West Wickham</li>
-                    <li>Central London (W1 – WC2 – SW1)</li>
-                    <li>Soho</li>
-                    <li>Chinatown</li>
-                    <li>Westminster</li>
-                </ul>
-            </div>
-
-            <!-- Column 3 -->
-            <div class="col-md-4 mb-md-4 mb-0">
-                <ul class="my-list">
-                    <li>Maidstone</li>
-                    <li>Bearstead</li>
-                    <li>Kings Hill</li>
-                    <li>West Malling</li>
-                    <li>Carshalton</li>
-                    <li>Epsom</li>
-                    <li>Croydon</li>
-                </ul>
-            </div>
-
-        </div>
     </div>
 </section>
 
 
+
+
+  
  
-    <div class="container-fluid p-0">
-    <img src="assets/images/con-img-last.jpg" class="w-100 d-md-block d-none">
-    <img src="assets/images/con-img-mob.jpg" class="w-100 d-md-none d-block">
-</div>
+
+   
+
+<section class="second-block py-5 mt-5">
+    <div class="container">
+        <div class="row ">
+
+            <!-- LEFT CONTENT WITH OFFSET -->
+                        <div class="col-12 col-md-10
+            col-lg-9
+            col-xl-11 px-md-3">
+
+                <!-- Add class here -->
+                <img src="assets/images/blue-plus.svg" class="second-plus mb-5 mb-md-4 mt-5 pt-md-5 ps-md-1" alt="+">
+
+                <p class="second-description mb-5 px-5 px-md-0">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id sem eu eros sagittis 
+                    eleifend ut quis velit. Aenean consequat mattis leo. Aliquam at justo rutrum.
+                </p>
+ <div class="button-sec button-sec-hero text-center text-md-start pt-3">
+                 <a href="#footer" class="btn btn-primary px-4 py-2 sec-btn">
+                    Discover More
+                </a>
+            </div>
+                
+
+            </div>
+
+            <!-- RIGHT IMAGE -->
+            <div class="col-12 col-md-12 col-lg-11 
+            col-xl-10 mt-5 col-md-10 ps-md-4 offset-md-1 mt-5 text-center d-none d-md-block">
+                <img src="assets/images/resi-img1.jpg" class="second-image" alt="">
+                <p class="second-desk-text mt-3">Maecenas dapibus dignissim quam nec dictum</p>
+            </div>
+            <div class="col-12  mt-5 col-md-10 offset-md-1 mt-5 text-center d-block d-md-none">
+                <img src="assets/images/sec-img-mob.jpg" class="second-image" alt="">
+                 <p class="second-desk-text second-desk-text-left text-center mt-3">Maecenas dapibus dignissim quam nec dictum</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="second-block third-block py-5">
+    <div class="container">
+        <div class="row">
+
+            <!-- RIGHT TEXT BLOCK -->
+            <div class="col-12
+            col-md-10 offset-md-2
+            col-lg-9 offset-lg-3
+            col-xl-8 offset-xl-4">
+
+                <img src="assets/images/blue-plus.svg" class="second-plus mb-4 mt-5 pt-md-5 ps-md-1" alt="+">
+
+                <p class="second-description mb-5 px-4 px-md-0">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id sem eu eros 
+                    sags eleifend ut quis velit. Aenean consequat mattis leo. Aliquam at justo rutrum.
+                </p>
+
+                <div class="button-sec button-sec-hero text-center text-md-start pt-3">
+                    <a href="#footer" class="btn btn-primary px-4 py-2 sec-btn">
+                        Discover More
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- DESKTOP IMAGE (More Left + Big) -->
+            <div class="col-12 
+            col-md-12 offset-md-0
+            col-lg-11 offset-lg-0
+            col-xl-10 offset-xl-1
+            mt-5 text-center d-none d-md-block pb-5">
+
+                <img src="assets/images/resi-img2.jpg" 
+                     class="third-image"
+                     >
+
+                <p class="second-desk-text second-desk-text-left mt-3">
+                    Maecenas dapibus dignissim quam nec dictum
+                </p>
+            </div>
+
+            <!-- MOBILE IMAGE -->
+            <div class="col-12 mt-5 text-center d-block d-md-none pb-5">
+                <img src="assets/images/sec3-mob-img.jpg" class="third-image" alt="">
+                <p class="second-desk-text second-desk-text-left text-center mt-3">
+                    Maecenas dapibus dignissim quam nec dictum
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+    
 
    
 
@@ -488,6 +628,13 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 
+<script>
+    [...document.body.querySelectorAll('*')].forEach(el => {
+  if (el.offsetWidth > document.documentElement.clientWidth) {
+    console.log('Overflow Element:', el);
+  }
+});
 
+</script>
 </body>
 </html>

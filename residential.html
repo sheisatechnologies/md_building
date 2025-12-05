@@ -63,82 +63,32 @@
             text-align: center;
         }
     }
+</style>
 
-    /* .intro-image-wrap  {
-    width: 100%;
-    text-align: center;
-    margin-top: 60px;
-     height: auto;
-    position: absolute;
-     margin-top: -75px;  
-    z-index: 50;
-} */
-
- /* DESKTOP IMAGE HALF OUTSIDE (BOTTOM) */
-.intro-image-wrap.d-md-block {
-    position: relative;
-}
-
-.intro-image-wrap.d-md-block .intro-image {
-    width: 100%;
-    height: auto;
-    position: absolute;
-    bottom: -120px; /* কতটুকু নিচে বের হবে সেটি এখানে control */
-    left: 0;
-}
-
-/* container যেন image overlap হতে পারে */
-.intro-block-resi .container {
-    position: relative;
-    overflow: visible !important;
-}
-
-
-/* DESKTOP (Everything fixed inside container) */
+<style>
+    /* DESKTOP POSITIONING */
 @media (min-width: 768px) {
 
-    .intro-block-resi .container {
+    .intro-block .container {
         position: relative;
         overflow: visible !important;
-        min-height: 1100px;
     }
 
-    .intro-block-resi .intro-image-wrap.d-md-block {
+    .intro-image-wrap.d-md-block {
         position: absolute;
-        bottom: -16rem;    /* কতটা নিচে overlap করবে */
-        left: 66%;
+       bottom: -50rem; /* এখানে control করবেন কতটা নিচে বের হবে */
+       left: 56%;
+        
         transform: translateX(-50%);
-           /* Image same size */
+             /* বড় image size (আপনার original size ধরে রাখা হয়েছে) */
         text-align: center;
         z-index: 3;
     }
 
-    .intro-block-resi .intro-image-wrap.d-md-block .intro-image {
+    .intro-image-wrap.d-md-block .intro-image {
         width: 100%;
         height: auto;
         display: block;
-    }
-
-    /* Paragraph under desktop image */
-    .intro-block-resi .intro-image-wrap.d-md-block .second-desk-text {
-        font-size: 16px;
-        margin-top: 15px;
-        color: #333;
-    }
-}
-
-/* MOBILE NORMAL */
-@media (max-width: 767px) {
-
-    .intro-block-resi .intro-image-wrap.d-md-block {
-        position: static !important;
-        transform: none !important;
-        bottom: auto !important;
-        width: 100% !important;
-    }
-
-    .intro-block-resi .intro-image-wrap.d-block img {
-        width: 100%;
     }
 
     /* Paragraph under image */
@@ -149,7 +99,23 @@
     }
 }
 
+/* MOBILE NORMAL */
+@media (max-width: 767px) {
 
+    .intro-image-wrap.d-md-block {
+        position: static !important;
+        transform: none !important;
+        bottom: auto !important;
+        width: 100% !important;
+    }
+
+    .intro-image-wrap.d-block img {
+        width: 100%;
+    }
+    .second-plus{
+    margin-top: 2rem !important;
+}
+}
 
 </style>
 </head>
@@ -180,7 +146,7 @@
                 <li class="nav-item">
                     <a class="nav-link mobile-link" href="index.html"><span>HOME</span></a>
                 </li>
- <!-- RESIDENTIAL -->
+ <!-- About-->
                 <li class="nav-item">
                     <a class="nav-link mobile-link " href="about.html"><span>About</span></a>
                 </li>
@@ -199,7 +165,7 @@
 
                 <!-- PORTFOLIO  -->
                <li class="nav-item">
-                    <a class="nav-link mobile-link " href="portfolio.html"><span>Portfolio</span></a>
+                    <a class="nav-link mobile-link" href="portfolio.html"><span>Portfolio</span></a>
                 </li>
 
                 <!-- CONTACT -->
@@ -253,19 +219,15 @@
     </div>
 </div> -->
 
-
-
-<section class="intro-block-resi mt-4 mt-md-0">
-    <div class="container py-5 px-2">
+<div class="intro-block intro-block-resi mt-4 mt-md-0">
+    <div class="container py-md-5 px-2">
 
         <div class="intro-content">
             <img src="assets/images/plus-icon.svg" class="intro-plus pt-5 mt-4 pb-5 ps-md-2" alt="+">
 
             <p class="intro-description pb-5 mb-md-4 mb-0 px-3 px-md-2">
-                Complete CAT A & CAT B fit-outs for offices,
-                hospitality venues, retail spaces and
-                commercial landlords across Central London
-                and the South East.
+              Structural openings, Extensions, Loft conversions, Kitchen transformations, Full refurbishments, Bathrooms, Landscaping, Garden renovations, Bifold openings, Exterior works
+
             </p>
 
             <div class="button-sec text-center text-md-start button-sec-hero pb-4 ps-md-2">
@@ -275,10 +237,10 @@
             </div>
         </div>
 
-       <!-- Desktop Image + Paragraph under it -->
+        <!-- Desktop Image + Paragraph under it -->
         <div class="intro-image-wrap d-md-block d-none">
             <img src="assets/images/resi-hero.jpg" class="intro-image" alt="">
-            
+            <p class="second-desk-text mt-3 pe-4">Maecenas dapibus dignissim quam nec dictum</p>
         </div>
 
         <!-- Mobile Image -->
@@ -286,14 +248,13 @@
             <img src="assets/images/hero-commer-mob.jpg" class="intro-image" alt="">
         </div>
 
-        <!-- Mobile Paragraph -->
-        <p class="second-desk-text second-desk-text-left text-center mt-3 d-block d-md-none">
-            Maecenas dapibus dignissim quam nec dictum
-        </p>
-
     </div>
-    <p class="second-desk-text mt-3">Maecenas dapibus dignissim quam nec dictum</p>
-</section>
+</div>
+
+<!-- Mobile paragraph under the image -->
+<p class="second-desk-text second-desk-text-left text-center mt-3 d-block d-md-none">
+    Maecenas dapibus dignissim quam nec dictum
+</p>
 
 
 
@@ -303,12 +264,12 @@
 
    
 
-<section class="second-block py-5 mt-5">
+<section class="second-block py-5">
     <div class="container">
-        <div class="row ">
+        <div class="row">
 
             <!-- LEFT CONTENT WITH OFFSET -->
-                        <div class="col-12 col-md-10
+            <div class="col-12 col-md-10
             col-lg-9
             col-xl-11 px-md-3">
 
@@ -330,7 +291,7 @@
 
             <!-- RIGHT IMAGE -->
             <div class="col-12 col-md-12 col-lg-11 
-            col-xl-10 mt-5 col-md-10 ps-md-4 offset-md-1 mt-5 text-center d-none d-md-block">
+            col-xl-10 mt-5 ps-md-4 col-md-10 offset-md-1 mt-5 text-center d-none d-md-block">
                 <img src="assets/images/resi-img1.jpg" class="second-image" alt="">
                 <p class="second-desk-text mt-3">Maecenas dapibus dignissim quam nec dictum</p>
             </div>
@@ -353,7 +314,7 @@
             col-lg-9 offset-lg-3
             col-xl-8 offset-xl-4">
 
-                <img src="assets/images/blue-plus.svg" class="second-plus mb-4 mt-5 pt-md-5 ps-md-1" alt="+">
+                <img src="assets/images/blue-plus.svg" class="second-plus second-plus-next mb-4 mt-5 pt-md-5 ps-md-1" alt="+">
 
                 <p class="second-description mb-5 px-4 px-md-0">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id sem eu eros 

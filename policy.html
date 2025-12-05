@@ -27,6 +27,8 @@
     <meta property='twitter:card' content='summary' />
     <meta property='twitter:description' content='Precision construction, structural expertise and professional project management for luxury home renovations, extensions, restaurant fit-outs, commercial refurbishments and architect-led developments.' />
     <meta property='twitter:image' content='assets/images/share.jpg' />
+    <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Google tag (gtag.js) -->
 <script>
@@ -41,6 +43,19 @@
 
 <style>
    
+
+
+.green-box {
+    background: #4CAF50;        /* সুন্দর সবুজ */
+    color: #fff;                /* সাদা টেক্সট */
+    border-radius: 6px;
+    font-size: 14px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+}
+
+
+
+
     /* DESKTOP TYPOGRAPHY */
     .section-heading-custom {
         color: #001429;
@@ -64,15 +79,65 @@
         }
     }
 </style>
+
+<style>
+/* Square Indicators Style */
+.carousel-indicators.indicators-square button {
+    width: 14px !important;
+    height: 14px !important;
+    border-radius: 0 !important;   /* Square */
+    background-color: #ccc !important;
+    border: none !important;
+    margin: 0 5px !important;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-indicators.indicators-square .active {
+    background-color: #003366 !important;
+}
+
+.sec-btn {
+    padding: 18px 39px !important;
+    font-size: 13px;
+    line-height: 12px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-family: 'Circular Book', Helvetica, Arial, sans-serif;
+    background-color:  #28488A;
+;
+}
+
+.indicators-square {
+    bottom: -50px !important;  /* image er niche thik bosbe */
+}
+
+.indicators-square button {
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    border: 2px solid #333;
+}
+
+.indicators-square .active {
+    background-color: #333;
+}
+
+
+</style>
+
+
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top px-md-5 px-3">
+ <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light px-md-5 px-3">
     <div class="container pt-md-4 pt-3 py-3">
 
         <!-- LOGO -->
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="#">
+            <!-- BLUE LOGO (default) -->
             <img class="logo-blue" src="assets/images/md-building-services-logo-blue.svg" alt="MD Building Services">
+
+            <!-- WHITE LOGO (mobile menu open) -->
             <img class="logo-white" src="assets/images/md-building-services-logo-white.svg" alt="MD Building Services">
         </a>
 
@@ -84,177 +149,130 @@
             <span class="toggler-icon bottom-bar"></span>
         </button>
 
-        <!-- MENU -->
+        <!-- MOBILE MENU -->
         <div class="collapse navbar-collapse mobile-menu" id="navbarCollapse">
             <ul class="navbar-nav ms-auto mb-2 mb-md-0">
-
-                <!-- HOME -->
                 <li class="nav-item">
-                    <a class="nav-link mobile-link" href="index.html"><span>HOME</span></a>
+                    <a class="nav-link mobile-link" href="index.html">HOME</a>
                 </li>
-               <!-- RESIDENTIAL -->
                 <li class="nav-item">
-                    <a class="nav-link mobile-link " href="about.html"><span>About</span></a>
+                    <a class="nav-link mobile-link" href="about.html">ABOUT</a>
                 </li>
-                
-
-
-                <!-- RESIDENTIAL -->
                 <li class="nav-item">
-                    <a class="nav-link mobile-link" href="residential.html"><span>RESIDENTIAL</span></a>
+                    <a class="nav-link mobile-link" href="residential.html">RESIDENTIAL</a>
                 </li>
-
-                <!-- COMMERCIAL -->
                 <li class="nav-item">
-                    <a class="nav-link mobile-link" href="commercial.html"><span>COMMERCIAL</span></a>
+                    <a class="nav-link mobile-link" href="commercial.html">COMMERCIAL</a>
                 </li>
-
-                <!-- PORTFOLIO  -->
-               <li class="nav-item">
-                    <a class="nav-link mobile-link " href="portfolio.html"><span>Portfolio</span></a>
-                </li>
-
-                <!-- CONTACT -->
                 <li class="nav-item">
-                    <a class="nav-link mobile-link active" href="contact.html"><span>CONTACT</span></a>
+                    <a class="nav-link mobile-link" href="portfolio.html">PORTFOLIO</a>
                 </li>
-
+                <li class="nav-item">
+                    <a class="nav-link mobile-link" href="contact.html">CONTACT</a>
+                </li>
             </ul>
         </div>
 
     </div>
 </nav>
 
-    <div class="nav-spacer"></div>
-  
 
-<section class="py-5 px-3 px-md-0 mt-4 mt-md-0 pd-md-0" style="background:#031A2E;">
-  <div class="container py-5">
-    
-    <!-- Title -->
-    <h2 class="text-white section-title section-title-con mb-5 pb-3 mt-5">Contact</h2>
 
-    <div class="row justify-content-between align-items-start">
 
-      <!-- Left Column -->
-      <div class="col-md-7">
 
-        <!-- Email -->
-        <div class="mb-md-4 mb-5">
-          <small class="text-white small-con">Email Mark</small>
-          <div class="d-flex align-items-center gap-3 mt-2">
-            <img src="assets/images/email1.svg" class="icon" alt="email">
-            <a href="mailto:mark@mdbuildingservices.co.uk" class="text-white contact-txt text-decoration-none">
-              mark@mdbuildingservices.co.uk
-            </a>
-          </div>
-        </div>
 
-        <!-- Phone -->
-        <div class="mb-md-5 md-3 pb-md-3">
-          <small class="text-white small-con">Call Mark</small>
-          <div class="d-flex align-items-center gap-3 mt-2">
-            <img src="assets/images/phone.svg" class="icon" alt="phone">
-            <a href="tel:07841409061" class="text-white contact-txt text-decoration-none">
-              07841 409 061
-            </a>
-          </div>
-        </div>
 
-        <!-- Footer Text -->
-        <p class="text-white con-bottom mt-4 d-md-block d-none">
-          MD Building Services (Maidstone) Ltd<br>
-         <span class="con-span">High-End Residential & Commercial Contractor<br>
-          Serving London, Sevenoaks, Orpington, Bromley, Chislehurst, Kent & the South East</span> 
-        </p>
 
-      </div>
 
-      <!-- Right Column -->
-      <div class="col-md-4 text-md-end mt-5 mt-md-0">
-        <small class="text-white small-con d-block mb-3 pe-5 me-5">Follow MD Building Services</small>
 
-        <div class="d-flex gap-4 justify-content-md-end justify-content-start">
-        
-                    <img src="assets/images/social-fb.svg" class="me-3 social-icn" alt="">
-                   
-                    <img src="assets/images/social-linkdin.svg" class="me-3 social-icn" alt="">
-                     <img src="assets/images/social-insta.svg" class="me-3 social-icn" alt="">
-                      <img src="assets/images/social.svg" class="me-3 social-icn" alt="">
+
+
+
+
+
+<section class="project-details py-5">
+    <div class="container">
+
+        <div class="row justify-content-between py-5">
+            
+            <!-- Left Content -->
+            <div class="col-lg-8 col-md-7 px-4 px-md-0">
+                   <h2 class="section-title section-title-mob mb-4 pt-5 pt-md-0 text-md-start mb-5">Cookie Policy</h2>
+                  
+ <h3 class="core-head text-start">What are Cookies?</h3>
+                <p class="core-para text-start">
+                   Cookies are small files which are stored on a user’s computer. They are designed to hold a modest amount of data specific to a particular client and website, and can be accessed either by the web server or the client computer. This allows the server to deliver a page tailored to a particular user, or the page itself can contain some script which is aware of the data in the cookie and so is able to carry information from one visit to the website (or related site) to the next.  <a href="https://example.com" class="my-link">Read more about cookies.</a> </p>
+<h3 class="core-head text-start">Cookies used on this website<br>_ga</h3>
+                <p class="core-para text-start">
+                 This is a Google analytics cookie and is used to distinguish unique users by assigning a randomly generated number as a client identifier. It is included in each page request in a site and used to calculate visitor, session and campaign data for the sites analytics reports.
+                </p>
+<h3 class="core-head text-start">_gat</h3>
+               <p class="core-para text-start">
+                 This is a Google analytics cookie, used to throttle the request rate - limiting the collection of data on high traffic sites. It expires after 10 minutes.</p>
+<h3 class="core-head text-start">_gid</h3>
+                <p class="core-para text-start">
+                    This is a Google session cookie, used to distinguish users. Default expiration time: 24 hours.
+                </p>
+
+                <h3 class="core-head text-start">exp_csrf_token</h3>
+                <p class="core-para text-start">
+                   This cookie protects against Cross Site Request Forgery (CSRF). A CSRF attack forces a logged-on victim’s browser to send a forged HTTP request, including the victim’s session cookie and any other automatically included authentication information, to a vulnerable web application. This allows the attacker to force the victim’s browser to generate requests the vulnerable application thinks are legitimate requests from the victim.
+                </p>
+
+                <h3 class="core-head text-start">exp_tracker</h3>
+                <p class="core-para text-start">
+                  Tracks the last 5 pages viewed by the user, and is used primarily for redirection after logging in etc. Affects guests and logged in users.
+                </p>
+
+                <h3 class="core-head text-start">exp_last_activity</h3>
+                <p class="core-para text-start">
+                 Every time the state is updated (the page reloaded) the last activity is set to the current datetime. Used to determine expiry. This is essential for logged in users, but not for guests - it is set for both.
+                </p>
+
+                <h3 class="core-head text-start">exp_last_visit</h3>
+                <p class="core-para text-start">
+               Some people prefer not to allow cookies, which is why most browsers give you the ability to manage cookies to suit you.
+                </p>
+
+                <h3 class="core-head text-start">Managing cookies in your browser</h3>
+                <p class="core-para text-start">
+                Some people prefer not to allow cookies, which is why most browsers give you the ability to manage cookies to suit you.
+                </p>
+
+                 <p class="core-para text-start">Some browsers limit or delete cookies, so you may want to review your cookie settings and ads settings. In some browsers you can set up rules to manage cookies on a site-by-site basis, giving you more fine-grained control over your privacy. What this means is that you can disallow cookies from all sites except those that you trust.</p>
+
+
+                    <p class="core-para text-start">Disabling cookies will often result in the website not functioning correctly and in some cases may stop the website functioning at all.</p>
+
+
+                    <h3 class="core-head text-start">How can I delete and remove cookies?r</h3>
+                <p class="core-para text-start">
+               Cookies are maintained by your web browser, so the method for deleting them will vary depending on which browser you are using. <a href="https://example.com" class="my-link">Read more about deleting cookies.</a>
+                </p>
+
+               
+
+
+                    <p class="core-para text-start">If you have any questions about the cookies used on this website, please write to us by email to our Data Protection officer (DPO).</p>
+
+                    
+
+                
+            </div>
+
+            <!-- Right Sidebar -->
+            
+
               
-
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-
-<section class="locations-section px-3">
-    <div class="container pt-md-5 pt-0 pt-md-0">
-
-        <!-- Subtitle -->
-        <div class="text-md-start text-center mb-2">
-           <p class="section-subtitle text-center text-md-start">— MD Building Services —</p>
         </div>
 
-        <!-- Main Title -->
-          <h2 class="section-title section-title-mob mb-4 text-center text-md-start"> Locations We Cover</h2>
-       
-
-        <div class="row mt-5">
-
-            <!-- Column 1 -->
-            <div class="col-md-4 mb-md-4 mb-0">
-                <ul class="my-list">
-                    <li>Sevenoaks</li>
-                    <li>Bromley</li>
-                    <li>Locksbottom</li>
-                    <li>Keston</li>
-                    <li>Beckenham</li>
-                    <li>Chislehurst</li>
-                    <li>Tonbridge</li>
-                </ul>
-            </div>
-
-            <!-- Column 2 -->
-            <div class="col-md-4 mb-md-4 mb-0">
-                <ul class="my-list">
-                    <li>Tunbridge Wells</li>
-                    <li>Biggin Hill</li>
-                    <li>West Wickham</li>
-                    <li>Central London (W1 – WC2 – SW1)</li>
-                    <li>Soho</li>
-                    <li>Chinatown</li>
-                    <li>Westminster</li>
-                </ul>
-            </div>
-
-            <!-- Column 3 -->
-            <div class="col-md-4 mb-md-4 mb-0">
-                <ul class="my-list">
-                    <li>Maidstone</li>
-                    <li>Bearstead</li>
-                    <li>Kings Hill</li>
-                    <li>West Malling</li>
-                    <li>Carshalton</li>
-                    <li>Epsom</li>
-                    <li>Croydon</li>
-                </ul>
-            </div>
-
-        </div>
     </div>
 </section>
 
 
- 
-    <div class="container-fluid p-0">
-    <img src="assets/images/con-img-last.jpg" class="w-100 d-md-block d-none">
-    <img src="assets/images/con-img-mob.jpg" class="w-100 d-md-none d-block">
-</div>
+
+
+   
 
    
 
@@ -487,7 +505,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 </script>
 
-
+<!-- Bootstrap 5 JS CDN -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

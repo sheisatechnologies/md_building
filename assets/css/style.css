@@ -423,11 +423,12 @@ footer .footer-bottom {
             }
 
             .hero-head {
-                font-size: 28px;
-                line-height: 36px;
+                font-size: 36px;
+                line-height: 38px;
                 font-weight: 600;
                 color: #fff;
                 margin-bottom: 15px;
+                text-align: left;
             }
 
             .hero-head-mob{
@@ -1113,6 +1114,8 @@ body.menu-open .logo-white {
     /* padding: 120px 0 80px; */
     position: relative;
     text-align: left;
+    height: 1100px;
+    
 }
 
 .intro-content {
@@ -1302,7 +1305,7 @@ text-align: center;
     letter-spacing: -0.11px;
      text-align: right;
      color: #001429;
-         margin-right: 8rem;
+         margin-right: 6rem;
 }
 
 .second-desk-text-left{
@@ -1824,3 +1827,47 @@ i {
 /* .core-para-li{
     line-height: 28px !important;
 } */
+
+
+
+.second-plus-next{
+    margin-top: 9rem !important;
+}
+
+
+
+
+
+
+
+
+.core-head {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.11px;
+}
+
+.my-link{
+    color: #001429;
+}
+
+@media (min-width: 1200px) {
+    .second-block-sky{
+    background-color: #E9EDF3;
+    padding-top: 216px !important ;
+    padding-bottom: 179px !important ;
+}
+}
+
+.second-block-sky{
+    background-color: #E9EDF3;
+    padding-top: 130px !important ;
+    padding-bottom: 100px !important ;
+}
+
+
+@media (max-width: 767px) {
+    .second-description-error{
+        text-align: start;
+    }
+}

@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,6 +27,8 @@
     <meta property='twitter:card' content='summary' />
     <meta property='twitter:description' content='Precision construction, structural expertise and professional project management for luxury home renovations, extensions, restaurant fit-outs, commercial refurbishments and architect-led developments.' />
     <meta property='twitter:image' content='assets/images/share.jpg' />
+    <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Google tag (gtag.js) -->
 <script>
@@ -43,6 +43,19 @@
 
 <style>
    
+
+
+.green-box {
+    background: #4CAF50;        /* সুন্দর সবুজ */
+    color: #fff;                /* সাদা টেক্সট */
+    border-radius: 6px;
+    font-size: 14px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+}
+
+
+
+
     /* DESKTOP TYPOGRAPHY */
     .section-heading-custom {
         color: #001429;
@@ -66,6 +79,53 @@
         }
     }
 </style>
+
+<style>
+/* Square Indicators Style */
+.carousel-indicators.indicators-square button {
+    width: 14px !important;
+    height: 14px !important;
+    border-radius: 0 !important;   /* Square */
+    background-color: #ccc !important;
+    border: none !important;
+    margin: 0 5px !important;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-indicators.indicators-square .active {
+    background-color: #003366 !important;
+}
+
+.sec-btn {
+    padding: 18px 39px !important;
+    font-size: 13px;
+    line-height: 12px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-family: 'Circular Book', Helvetica, Arial, sans-serif;
+    background-color:  #28488A;
+;
+}
+
+.indicators-square {
+    bottom: -50px !important;  /* image er niche thik bosbe */
+}
+
+.indicators-square button {
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    border: 2px solid #333;
+}
+
+.indicators-square .active {
+    background-color: #333;
+}
+
+
+</style>
+
+
 </head>
 <body>
 
@@ -118,7 +178,7 @@
 
                 <!-- CONTACT -->
                 <li class="nav-item">
-                    <a class="nav-link mobile-link" href="contact.html"><span>CONTACT</span></a>
+                    <a class="nav-link mobile-link active" href="contact.html"><span>CONTACT</span></a>
                 </li>
 
             </ul>
@@ -127,38 +187,40 @@
     </div>
 </nav>
 
-     <div class="nav-spacer"></div>
+    <div class="nav-spacer"></div>
 
 
-<section class="second-block second-block-sky">
-    <div class="container">
-        <div class="row ">
 
-            <!-- LEFT CONTENT WITH OFFSET -->
-                        <div class="col-12 col-md-10
-            col-lg-9
-            col-xl-11 px-md-3">
 
-                
 
-                <p class="second-description second-description-error px-5 px-md-0">
-                   Error 404
-                </p>
-                <h3 class="core-head text-start px-5 px-md-0 mb-0 pb-0">Page or file not found?</h3>
-                <p class="core-para text-start  px-5 px-md-0">We’re sorry, but the page or file you are looking for doesn’t exist.</p>
- <div class="button-sec button-sec-hero text-start text-md-start pt-3 px-md-0 px-5">
-                 <a href="#footer" class="btn btn-primary px-4 py-2 sec-btn">
-                    Discover More
-                </a>
+
+
+<section class="project-hero position-relative mt-5 pt-5">
+
+    <div id="projectSlider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="assets/images/portfolio_view.png" class="d-block w-100" alt="Slide 1">
             </div>
-                
-
+            <div class="carousel-item">
+                <img src="assets/images/portfolio_view.png" class="d-block w-100" alt="Slide 2">
             </div>
-
-            
-
+            <div class="carousel-item">
+                <img src="assets/images/portfolio_view.png" class="d-block w-100" alt="Slide 3">
+            </div>
         </div>
+        
+
+        <!-- Square Indicators -->
+        <div class="carousel-indicators indicators-square">
+            <button type="button" data-bs-target="#projectSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#projectSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#projectSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
     </div>
+
 </section>
 
 
@@ -166,11 +228,137 @@
 
 
 
+<section class="project-details py-5">
+    <div class="container">
+
+        <div class="row justify-content-between py-5">
+            
+            <!-- Left Content -->
+            <div class="col-lg-8 col-md-7">
+                   <h2 class="section-title section-title-mob mb-4 text-center text-md-start mb-5"> Project Name Title Here</h2>
+                  
+</p>
+                <p class="core-para text-start">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id sem eu eros sagittis eleifend ut quis velit. Aenean consequat mattis leo. Aliquam at justo rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id sem eu eros sagittis eleifend ut quis velit. Aenean consequat mattis leo. Aliquam at justo rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id sem eu eros sagittis eleifend ut quis velit. Aenean consequat mattis leo. Aliquam at justo rutrum. Aliquam at justo rutrum. Lorem ipsum dolor sit
+                </p>
+
+                <p class="core-para text-start">
+                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id sem eu eros sagittis eleifend ut quis velit. Aenean consequat mattis leo. Aliquam at justo rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id sem eu eros sagittis eleifend ut quis velit. Aenean consequat mattis leo. Aliquam at justo rutrum. Lorem ipsum dolor.
+                </p>
+
+               <p class="core-para text-start">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id sem eu eros sagittis eleifend ut quis velit. Aenean consequat mattis leo. Aliquam at justo rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id sem eu eros sagittis eleifend ut quis velit. Aenean consequat mattis leo. Aliquam at justo rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id sem eu eros sagittis eleifend ut quis velit. Aenean consequat mattis leo. Aliquam at justo rutrum ipsum dolor ok.
+                </p>
+
+                <p class="core-para text-start">
+                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id sem eu eros sagittis eleifend ut quis velit. Aenean consequat mattis leo. Aliquam at justo rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id sem eu eros sagittis eleifend ut quis velit. Aenean consequat mattis leo. Aliquam at justo rutrum. Lorem ipsum dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id sem eu eros sagittis eleifend ut quis velit. Aenean consequat mattis leo. Aliquam at justo rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id sem eu eros sagittis eleifend ut quis velit. Aenean consequat mattis leo. Aliquam at justo rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id sem eu eros sagittis eleifend ut quis velit.</p>
+
+                
+            </div>
+
+            <!-- Right Sidebar -->
+            <div class="col-lg-3 col-md-4 mt-md-5 pt-md-3 mt-0 pt-0">
+                
+
+                <ul class="list-unstyled core-para  text-start mt-5">
+                    <li class="bold-li">Categories</li>
+                    <li>Residential</li>
+                    <li>Extensions + Remodelling</li>
+                    <li>Commercial</li>
+                    <li>Shop Fit Out</li>
+                </ul>
+            </div>
+
+              <div class="button-sec text-center text-md-center pb-md-4 mt-5">
+            <a href="#footer" class="btn btn-primary px-4 py-2 sec-btn sec-btn-portfolio">
+                Porfolio
+            </a>
+        </div>
+        </div>
+
+    </div>
+</section>
 
 
 
+ <div id="testimonial" class="text-center testimonial-section py-md-5 py-5">
+    <div class="container">
 
+        <p class="section-subtitle text-white  ptd4 ptm4">— MD Building Services —</p>
+        <h2 class="section-title section-title-mob mb-4 text-white">Testimonial</h2>
 
+        <div class="row justify-content-center pbd4 pbm4 pt-4 pt-md-0">
+            <div class="col-lg-8 position-relative">
+
+                <!-- Left Quote -->
+                <img src="assets/images/quote-mark-left.svg" alt="quote" class="quote-left">
+
+                <!-- Right Quote -->
+                <img src="assets/images/quote-mark-right.svg" alt="quote" class="quote-right">
+
+                <!-- Slick Slider -->
+                <div class="testimonial-slider py-md-4 py-5">
+
+                    <div class="testimonial-slide">
+                        <p class="testimonial-text px-5">
+                          Fantastic job done on our bifolds and garden by MD Building Services. Superb attention to detail. We're so pleased with our new space - thanks to Mark and the team. Would highly recommend.....
+                        </p>
+                        <p class="testimonial-author"> Simon Nash</p>
+                    </div>
+
+                    <div class="testimonial-slide">
+                        <p class="testimonial-text px-5">
+                          Great work, professional service.
+                        </p>
+                        <p class="testimonial-author"> Michelle</p>
+                    </div>
+                    <div class="testimonial-slide">
+                        <p class="testimonial-text px-5">
+                         We had Dave fix some issues that a previous builder had left us with and he was absolutely brilliant, did everything with a smile, very polite and punctual. Did a great job to fix the shower tray and reposition a leaking toilet which had not been installed correctly previously. Would highly recommend.
+                        </p>
+                        <p class="testimonial-author"> Lilianna</p>
+                    </div>
+                    <div class="testimonial-slide">
+                        <p class="testimonial-text px-5">
+                         Really pleased with the work carried out from MD Building Services Ltd The guys were lovely, polite and punctual kept the garden as tidy as possible whilst the work was being carried out. Mark was always available to contact Highly recommend.
+                        </p>
+                        <p class="testimonial-author"> T Smith</p>
+                    </div>
+
+                     <div class="testimonial-slide">
+                        <p class="testimonial-text px-5">
+                        Managed the full renovation of our 300 year property, always prompt , honest and upfront . Made out wreck into a beautiful home.
+                        </p>
+                        <p class="testimonial-author"> Jonathan</p>
+                    </div>
+                    <div class="testimonial-slide">
+                        <p class="testimonial-text px-5">
+                       The work was carried out to a thoroughly profesdional and exemplary standard.
+                        </p>
+                        <p class="testimonial-author"> Privacy</p>
+                    </div>
+
+                    <div class="testimonial-slide">
+                        <p class="testimonial-text px-5">
+                        We had a consistent and high quality set of builders on site for over 6 months.
+                        <p class="testimonial-author">Andrew Bertolaso</p>
+                    </div>
+
+                    
+
+                </div><!-- slider end -->
+               <div class="button-sec text-center text-md-center pb-md-4 mt-5">
+            <a href="#footer" class="btn btn-primary px-4 py-2 sec-btn sec-btn-portfolio">
+                Contact Us
+            </a>
+        </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+   
 
    
 
@@ -403,45 +591,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 </script>
 
-
+<!-- Bootstrap 5 JS CDN -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
