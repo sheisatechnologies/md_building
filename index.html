@@ -109,7 +109,7 @@
     .hero-section {
         height: 750px; /* You can adjust based on your design */
         position: relative;
-        overflow: hidden;
+        overflow: visible;
     }
 
     .hero-bg {
@@ -124,12 +124,14 @@
 }
 
 
+
+
 /* Hero section fixed height on large screens */
 @media (min-width: 1500px) {
     .hero-section {
         height: 1000px; /* You can adjust based on your design */
         position: relative;
-        overflow: hidden;
+        overflow: visible;
     }
 
     .hero-bg {
@@ -351,6 +353,9 @@
     <img src="assets/images/md-building-services-hero-mobile-02.jpg" 
          class="img-fluid w-100 d-block d-md-none hero-bg">
 
+         <!-- FLOATING ICON (NO WHITE SPACE) -->
+    <img src="assets/images/plus-icon.svg" class="floating-icon" alt="plus">
+
     <!-- CONTENT OVER IMAGE -->
     <div class="container hero-overlay mt-5">
         <div class="row justify-content-center">
@@ -381,10 +386,10 @@
 
 </div>
 
-<section class="py-5 bg-blue d-md-block d-none">
+<section class="py-5 bg-blue next-sec ">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-10 col-xl-10 text-center">
+            <div class="col-lg-10 col-xl-10 text-center pt-md-5 mt-md-5">
 
                 <!-- HEADING -->
                 <h2 class="section-heading-custom mb-4 pt-5 pb-5 mt-md-5 mb-md-4">
@@ -552,7 +557,7 @@
             </div>
 
             <!-- RIGHT IMAGE BLOCK -->
-            <div class="col-md-6 offset-md-1 p-0">
+            <div class="col-md-6 p-0 ms-md-auto">
                 <div class="right-image">
                      <img src="assets/images/home-makes-us-different.jpg" class="diff-img" alt="diff">
                 </div>

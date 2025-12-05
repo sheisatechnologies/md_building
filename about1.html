@@ -63,94 +63,6 @@
             text-align: center;
         }
     }
-
-    /* .intro-image-wrap  {
-    width: 100%;
-    text-align: center;
-    margin-top: 60px;
-     height: auto;
-    position: absolute;
-     margin-top: -75px;  
-    z-index: 50;
-} */
-
- /* DESKTOP IMAGE HALF OUTSIDE (BOTTOM) */
-.intro-image-wrap.d-md-block {
-    position: relative;
-}
-
-.intro-image-wrap.d-md-block .intro-image {
-    width: 100%;
-    height: auto;
-    position: absolute;
-    bottom: -120px; /* কতটুকু নিচে বের হবে সেটি এখানে control */
-    left: 0;
-}
-
-/* container যেন image overlap হতে পারে */
-.intro-block-resi .container {
-    position: relative;
-    overflow: visible !important;
-}
-
-
-/* DESKTOP (Everything fixed inside container) */
-@media (min-width: 768px) {
-
-    .intro-block-resi .container {
-        position: relative;
-        overflow: visible !important;
-        min-height: 1100px;
-    }
-
-    .intro-block-resi .intro-image-wrap.d-md-block {
-        position: absolute;
-        bottom: -16rem;    /* কতটা নিচে overlap করবে */
-        left: 66%;
-        transform: translateX(-50%);
-           /* Image same size */
-        text-align: center;
-        z-index: 3;
-    }
-
-    .intro-block-resi .intro-image-wrap.d-md-block .intro-image {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-
-    /* Paragraph under desktop image */
-    .intro-block-resi .intro-image-wrap.d-md-block .second-desk-text {
-        font-size: 16px;
-        margin-top: 15px;
-        color: #333;
-    }
-}
-
-/* MOBILE NORMAL */
-@media (max-width: 767px) {
-
-    .intro-block-resi .intro-image-wrap.d-md-block {
-        position: static !important;
-        transform: none !important;
-        bottom: auto !important;
-        width: 100% !important;
-    }
-
-    .intro-block-resi .intro-image-wrap.d-block img {
-        width: 100%;
-    }
-
-    /* Paragraph under image */
-    .intro-image-wrap .second-desk-text {
-        font-size: 16px;
-        margin-top: 15px;
-        color: #333;
-    }
-}
-
-
-
 </style>
 </head>
 <body>
@@ -253,148 +165,130 @@
     </div>
 </div> -->
 
+<section class="sec-1">
+    <div class="container position-relative">
 
+        <!-- Top Plus -->
+        <img src="assets/images/plus-icon.svg" class="plus plus-top" alt="+">
 
-<section class="intro-block-resi mt-4 mt-md-0">
-    <div class="container py-5 px-2">
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <h2 class="intro-description intro-description-about">M D Building Services is a high-end, multi-disciplinary contractor delivering premium residential and commercial construction across Central London, South London and Kent.</h2>
+                <p class="sec-text">We take pride in our craftsmanship, precise detailing and professional coordination with designers, architects and clients.</p>
+            </div>
 
-        <div class="intro-content">
-            <img src="assets/images/plus-icon.svg" class="intro-plus pt-5 mt-4 pb-5 ps-md-2" alt="+">
-
-            <p class="intro-description pb-5 mb-md-4 mb-0 px-3 px-md-2">
-                Complete CAT A & CAT B fit-outs for offices,
-                hospitality venues, retail spaces and
-                commercial landlords across Central London
-                and the South East.
-            </p>
-
-            <div class="button-sec text-center text-md-start button-sec-hero pb-4 ps-md-2">
-                <a href="#footer" class="btn btn-primary px-4 py-2 sec-btn sec-btn-white">
-                    View Our Portfolio
-                </a>
+            <div class="col-lg-4 offset-lg-1 text-center text-lg-start mt-4 mb-5 mt-lg-0">
+                <img src="assets/images/about-sec1-img.jpg" class="tall-img" alt="">
+                <p class="img-caption">Lorem ipsum dolor</p>
             </div>
         </div>
 
-       <!-- Desktop Image + Paragraph under it -->
-        <div class="intro-image-wrap d-md-block d-none">
-            <img src="assets/images/resi-hero.jpg" class="intro-image" alt="">
-            
-        </div>
+        <!-- Bottom image + bottom plus -->
+        <div class="row mt-5">
+            <div class="col-lg-6 position-relative">
+                <img src="assets/images/about-sec2-img.jpg" class="bottom-img" alt="">
+                <p class="img-caption">Maecenas dapibus…</p>
 
-        <!-- Mobile Image -->
-        <div class="intro-image-wrap d-block d-md-none pt-5">
-            <img src="assets/images/hero-commer-mob.jpg" class="intro-image" alt="">
+                <!-- Bottom Plus FIXED -->
+               
+            </div>
         </div>
-
-        <!-- Mobile Paragraph -->
-        <p class="second-desk-text second-desk-text-left text-center mt-3 d-block d-md-none">
-            Maecenas dapibus dignissim quam nec dictum
-        </p>
 
     </div>
-    <p class="second-desk-text mt-3">Maecenas dapibus dignissim quam nec dictum</p>
+</section>
+
+<section class="sec-2">
+    <div class="container position-relative">
+
+        <!-- Plus only for this section -->
+        <img src="assets/images/grey-icon.svg" class="plus plus-sec2" alt="+">
+
+        <div class="row mt-5">
+            <div class="col-lg-5 offset-lg-6">
+                <h3 class="sec2-title">Lorem ipsum</h3>
+
+                <ul class="sec2-list">
+                    <li>Your background</li>
+                    <li>Values in the company</li>
+                    <li>Commitment to quality</li>
+                    <li>Very client-led work style</li>
+                    <li>Experience in both sectors</li>
+                    <li>Residential projects</li>
+                    <li>Health & Safety commitment</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12">
+                <img src="assets/images/sec2-img-about.jpg" class="large-img" alt="">
+            </div>
+        </div>
+
+    </div>
 </section>
 
 
 
-
-  
- 
-
-   
-
-<section class="second-block py-5 mt-5">
+<!-- BLUE SECTION -->
+<section class="blue-sec py-5">
     <div class="container">
-        <div class="row ">
 
-            <!-- LEFT CONTENT WITH OFFSET -->
-                        <div class="col-12 col-md-10
-            col-lg-9
-            col-xl-11 px-md-3">
-
-                <!-- Add class here -->
-                <img src="assets/images/blue-plus.svg" class="second-plus mb-5 mb-md-4 mt-5 pt-md-5 ps-md-1" alt="+">
-
-                <p class="second-description mb-5 px-5 px-md-0">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id sem eu eros sagittis 
-                    eleifend ut quis velit. Aenean consequat mattis leo. Aliquam at justo rutrum.
+        <!-- Heading + Paragraph -->
+        <div class="row mb-5">
+            <div class="col-lg-8">
+                <h2 class="blue-heading">Our Approach to Excellence</h2>
+                <p class="blue-para">
+                    We combine craftsmanship with careful planning to deliver premium projects
+                    across residential and commercial sectors.
                 </p>
- <div class="button-sec button-sec-hero text-center text-md-start pt-3">
-                 <a href="#footer" class="btn btn-primary px-4 py-2 sec-btn">
-                    Discover More
-                </a>
             </div>
-                
+        </div>
 
-            </div>
-
-            <!-- RIGHT IMAGE -->
-            <div class="col-12 col-md-12 col-lg-11 
-            col-xl-10 mt-5 col-md-10 ps-md-4 offset-md-1 mt-5 text-center d-none d-md-block">
-                <img src="assets/images/resi-img1.jpg" class="second-image" alt="">
-                <p class="second-desk-text mt-3">Maecenas dapibus dignissim quam nec dictum</p>
-            </div>
-            <div class="col-12  mt-5 col-md-10 offset-md-1 mt-5 text-center d-block d-md-none">
-                <img src="assets/images/sec-img-mob.jpg" class="second-image" alt="">
-                 <p class="second-desk-text second-desk-text-left text-center mt-3">Maecenas dapibus dignissim quam nec dictum</p>
+        <!-- TWO IMAGES -->
+        <div class="row align-items-end">
+            <!-- Left Image -->
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <img src="assets/images/sec3-abou-img.jpg" class="blue-img-left" alt="">
             </div>
 
+            <!-- Right Image -->
+            <div class="col-lg-6 text-lg-end">
+                <img src="assets/images/sec3-about-img2.jpg" class="blue-img-right" alt="">
+            </div>
         </div>
     </div>
 </section>
 
-<section class="second-block third-block py-5">
+
+<!-- NEXT SECTION → TWO COLUMN TEXT SECTION -->
+<section class="text-cols-sec py-5">
     <div class="container">
         <div class="row">
 
-            <!-- RIGHT TEXT BLOCK -->
-            <div class="col-12
-            col-md-10 offset-md-2
-            col-lg-9 offset-lg-3
-            col-xl-8 offset-xl-4">
-
-                <img src="assets/images/blue-plus.svg" class="second-plus mb-4 mt-5 pt-md-5 ps-md-1" alt="+">
-
-                <p class="second-description mb-5 px-4 px-md-0">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id sem eu eros 
-                    sags eleifend ut quis velit. Aenean consequat mattis leo. Aliquam at justo rutrum.
-                </p>
-
-                <div class="button-sec button-sec-hero text-center text-md-start pt-3">
-                    <a href="#footer" class="btn btn-primary px-4 py-2 sec-btn">
-                        Discover More
-                    </a>
-                </div>
-
-            </div>
-
-            <!-- DESKTOP IMAGE (More Left + Big) -->
-            <div class="col-12 
-            col-md-12 offset-md-0
-            col-lg-11 offset-lg-0
-            col-xl-10 offset-xl-1
-            mt-5 text-center d-none d-md-block pb-5">
-
-                <img src="assets/images/resi-img2.jpg" 
-                     class="third-image"
-                     >
-
-                <p class="second-desk-text second-desk-text-left mt-3">
-                    Maecenas dapibus dignissim quam nec dictum
+            <!-- Left Column -->
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <h3 class="col-title">Delivering Quality</h3>
+                <p class="col-text">
+                    Our commitment to quality is reflected in every detail of our work,
+                    from planning to execution.
                 </p>
             </div>
 
-            <!-- MOBILE IMAGE -->
-            <div class="col-12 mt-5 text-center d-block d-md-none pb-5">
-                <img src="assets/images/sec3-mob-img.jpg" class="third-image" alt="">
-                <p class="second-desk-text second-desk-text-left text-center mt-3">
-                    Maecenas dapibus dignissim quam nec dictum
+            <!-- Right Column -->
+            <div class="col-lg-6">
+                <h3 class="col-title">Expert Coordination</h3>
+                <p class="col-text">
+                    We collaborate closely with designers, architects and clients to ensure
+                    seamless project delivery.
                 </p>
             </div>
 
         </div>
     </div>
 </section>
+
+
 
 
 

@@ -397,8 +397,10 @@ footer .footer-bottom {
 
             .hero-section {
                 position: relative;
-                overflow: hidden;
+                overflow: visible;
             }
+
+            
 
             /* mobile image full width */
             .hero-img-mobile {
@@ -616,6 +618,21 @@ footer .footer-bottom {
     background-color: #D4DAE8;
     color: #001429;
     border-color: #D4DAE8;
+}
+
+.sec-btn-portfolio:hover{
+    padding: 18px 39px !important;
+    font-size: 13px;
+    line-height: 12px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    background-color: #D4DAE8 !important;
+    color: #001429 !important;
+    border-color: #D4DAE8 !important;
+}
+
+.sec-btn-portfolio{
+    border: none !important;
 }
 
 .diff-text{
@@ -1163,7 +1180,6 @@ body.menu-open .logo-white {
    max-width: 931px;
     letter-spacing: -2px;
     font-family: "Circular Book";
-    
 }
 
 .second-image {
@@ -1286,7 +1302,7 @@ text-align: center;
     letter-spacing: -0.11px;
      text-align: right;
      color: #001429;
-         margin-right: 6rem;
+         margin-right: 8rem;
 }
 
 .second-desk-text-left{
@@ -1609,3 +1625,202 @@ i {
 
 
 
+/* SECTION 1 */
+.sec-1 {
+    background: #EEF3F8;
+    padding: 120px 0;
+}
+
+.intro-description-about{
+    font-size: 50px;
+    line-height: 52px;
+    font-weight: 450;
+    letter-spacing: -2px;
+     font-family: "Circular Book";
+     color: #001429;
+     max-width: 853px;
+}
+
+.sec-text {
+   font-size: 16px;
+   line-height: 25px;
+    color: #666;
+    letter-spacing: -0.11px;
+    font-weight: 400;
+    font-family: "Circular Book";
+    color: #001429;
+}
+
+.tall-img,
+.bottom-img {
+    width: 100%;
+}
+
+/* SECTION 1 — plus icons */
+.plus {
+    width: 73px;
+    position: absolute;
+}
+
+.plus-top {
+    top: -80px;
+    left: 20px;
+}
+
+.plus-bottom {
+    bottom: -30px;   /* stays inside Section 1 */
+    right: -30px;
+}
+
+/* SECTION 2 */
+.sec-2 {
+    background: #FFFFFF;
+    padding: 150px 0;
+    position: relative;
+}
+
+.plus-sec2 {
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.large-img {
+    width: 100%;
+    margin-top: 40px;
+}
+
+/* MOBILE FIXES */
+@media (max-width:768px){
+     /* same as figma */
+    .sec-title {
+        font-size: 24px;
+    }
+}
+
+
+/* Desktop: apply max-width */
+@media (min-width: 992px) {
+    .tall-img {
+        max-width: 213px;
+    }
+    .bottom-img {
+        max-width: 539px;
+    }
+
+    .large-img{
+        max-width: 
+960px;
+    }
+}
+
+
+
+/* BLUE SECTION */
+.blue-sec {
+    background: #144A9B; /* Blue background */
+    color: #fff;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.blue-heading {
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.blue-para {
+    font-size: 18px;
+    line-height: 1.65;
+    margin-top: 15px;
+}
+
+/* Image sizing EXACT like your screenshot */
+.blue-img-left {
+    width: 100%;
+    max-width: 430px; /* big image */
+}
+
+.blue-img-right {
+    width: 100%;
+    max-width: 230px; /* tall image */
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .blue-img-left,
+    .blue-img-right {
+        max-width: 100%;
+    }
+}
+
+
+/* NEXT SECTION - TWO COLUMN TEXT */
+.text-cols-sec {
+    background: #ffffff;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.col-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.col-text {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+
+
+.hero-section {
+    position: relative;
+    z-index: 1;
+}
+
+.floating-icon {
+    position: absolute;
+    left: 50%;
+    bottom: -190px;
+    transform: translateX(16%);
+    width: 383px;
+    height: auto;
+    z-index: 999;
+}
+
+
+
+/* Give the next section space so icon is not hidden */
+.next-section {
+    padding-top: 60px; /* should be > icon overlap */
+    position: relative;
+    z-index: 1;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .floating-icon {
+        width: 124.1px;
+        bottom: -61px;
+    }
+
+    .next-section {
+        padding-top: 45px;
+    }
+}
+
+
+
+
+.bold-li{
+    font-weight: 700;
+}
+
+
+/* .core-para-li{
+    line-height: 28px !important;
+} */
