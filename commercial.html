@@ -64,6 +64,57 @@
         }
     }
 </style>
+
+<style>
+    /* DESKTOP POSITIONING */
+@media (min-width: 768px) {
+
+    .intro-block .container {
+        position: relative;
+        overflow: visible !important;
+    }
+
+    .intro-image-wrap.d-md-block {
+        position: absolute;
+       bottom: -41rem; /* এখানে control করবেন কতটা নিচে বের হবে */
+        left: 50%;   /* image কতটা নিচে fixed থাকবে */
+        
+        transform: translateX(-50%);
+             /* বড় image size (আপনার original size ধরে রাখা হয়েছে) */
+        text-align: center;
+        z-index: 3;
+    }
+
+    .intro-image-wrap.d-md-block .intro-image {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* Paragraph under image */
+    .intro-image-wrap .second-desk-text {
+        font-size: 16px;
+        margin-top: 15px;
+        color: #333;
+    }
+}
+
+/* MOBILE NORMAL */
+@media (max-width: 767px) {
+
+    .intro-image-wrap.d-md-block {
+        position: static !important;
+        transform: none !important;
+        bottom: auto !important;
+        width: 100% !important;
+    }
+
+    .intro-image-wrap.d-block img {
+        width: 100%;
+    }
+}
+
+</style>
 </head>
 <body>
 
@@ -166,38 +217,43 @@
 </div> -->
 
 <div class="intro-block mt-4 mt-md-4">
-     <div class="container  py-5 px-2">
-            <div class="intro-content">
+    <div class="container py-5 px-2">
 
-        <img src="assets/images/plus-icon.svg" class="intro-plus pt-5 mt-4 pb-5 ps-md-2" alt="+">
+        <div class="intro-content">
+            <img src="assets/images/plus-icon.svg" class="intro-plus pt-5 mt-4 pb-5 ps-md-2" alt="+">
 
-        <p class="intro-description pb-5 mb-md-4 mb-0 px-3 px-md-2">
-            Complete CAT A & CAT B fit-outs for offices,
-            hospitality venues, retail spaces and
-            commercial landlords across Central London
-            and the South East.
-        </p>
+            <p class="intro-description pb-5 mb-md-4 mb-0 px-3 px-md-2">
+                Complete CAT A & CAT B fit-outs for offices,
+                hospitality venues, retail spaces and
+                commercial landlords across Central London
+                and the South East.
+            </p>
 
-      <div class="button-sec text-center text-md-start button-sec-hero pb-4 ps-md-2">
-                 <a href="#footer" class="btn btn-primary px-4 py-2 sec-btn sec-btn-white">
-                  View Our Portfolio
+            <div class="button-sec text-center text-md-start button-sec-hero pb-4 ps-md-2">
+                <a href="#footer" class="btn btn-primary px-4 py-2 sec-btn sec-btn-white">
+                    View Our Portfolio
                 </a>
             </div>
-    </div>
+        </div>
 
-    <div class="intro-image-wrap d-md-block d-none">
-        <img src="assets/images/hero-img2.jpg" class="intro-image" alt="">
-         <p class="second-desk-text mt-3">Maecenas dapibus dignissim quam nec dictum</p>
-    </div>
+        <!-- Desktop Image + Paragraph under it -->
+        <div class="intro-image-wrap d-md-block d-none">
+            <img src="assets/images/hero-img2.jpg" class="intro-image" alt="">
+            <p class="second-desk-text mt-3">Maecenas dapibus dignissim quam nec dictum</p>
+        </div>
+
+        <!-- Mobile Image -->
         <div class="intro-image-wrap d-block d-md-none pt-5">
-        <img src="assets/images/hero-commer-mob.jpg" class="intro-image" alt="">
-         
-    </div>
-   
+            <img src="assets/images/hero-commer-mob.jpg" class="intro-image" alt="">
+        </div>
+
     </div>
 </div>
-   
-     <p class="second-desk-text second-desk-text-left text-center mt-3 d-block d-md-none">Maecenas dapibus dignissim quam nec dictum</p>
+
+<!-- Mobile paragraph under the image -->
+<p class="second-desk-text second-desk-text-left text-center mt-3 d-block d-md-none">
+    Maecenas dapibus dignissim quam nec dictum
+</p>
 
 
 

@@ -1152,6 +1152,7 @@ body.menu-open .logo-white {
 
 .second-plus {
     width: 73px;
+    margin-top: 35rem !important;
 }
 
 .second-description {
@@ -1162,6 +1163,7 @@ body.menu-open .logo-white {
    max-width: 931px;
     letter-spacing: -2px;
     font-family: "Circular Book";
+    
 }
 
 .second-image {
