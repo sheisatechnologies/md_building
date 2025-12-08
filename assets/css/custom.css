@@ -463,8 +463,9 @@ a.nav-link.active {
         padding-bottom: 10px;
     }
     .navbar-nav {
-        padding-top: 140px;
-        padding-bottom: 420px
+        padding-top: 115px;
+        padding-bottom: 439px;
+        gap: 12px;
     }
     .navbar {
         padding-top: 14px;

@@ -95,9 +95,17 @@
                     <a class="nav-link mobile-link" href="index.html"><span>HOME</span></a>
                 </li>
                <!-- RESIDENTIAL -->
-                <li class="nav-item">
-                    <a class="nav-link mobile-link " href="about.html"><span>About</span></a>
-                </li>
+                <!-- About-->
+              <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle mobile-link" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown">
+        <span>About</span>
+    </a>
+    <ul class="dropdown-menu custom-dropdown" aria-labelledby="aboutDropdown">
+        <li><a class="dropdown-item" href="about.html">Our Company</a></li>
+        <li><a class="dropdown-item" href="team.html">Team</a></li>
+        <li><a class="dropdown-item" href="history.html">Our History</a></li>
+    </ul>
+</li>
                 
 
 
@@ -112,9 +120,16 @@
                 </li>
 
                 <!-- PORTFOLIO  -->
-               <li class="nav-item">
-                    <a class="nav-link mobile-link " href="portfolio.html"><span>Portfolio</span></a>
-                </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle mobile-link" href="#" id="portfolioDropdown" role="button" data-bs-toggle="dropdown">
+        <span>Portfolio</span>
+    </a>
+    <ul class="dropdown-menu custom-dropdown" aria-labelledby="portfolioDropdown">
+        <li><a class="dropdown-item" href="portfolio.html">All Projects</a></li>
+        <li><a class="dropdown-item" href="residential.html">Residential</a></li>
+        <li><a class="dropdown-item" href="commercial.html">Commercial</a></li>
+    </ul>
+</li>
 
                 <!-- CONTACT -->
                 <li class="nav-item">
@@ -144,8 +159,8 @@
                 <p class="second-description second-description-error px-5 px-md-1 ps-mob-1">
                    Error 404
                 </p>
-                <h3 class="core-head text-start px-5 px-md-1 mb-0 pb-0 ps-mob-1">Page or file not found?</h3>
-                <p class="core-para text-start  px-5 px-md-1 ps-mob-1 mb-5 pb-3">We’re sorry, but the page or file you are looking for doesn’t exist.</p>
+                
+                <p class="core-para text-start  px-5 px-md-1 ps-mob-1 mb-5 pb-3"> <span class="core-head">Page or file not found?</span></br>We’re sorry, but the page or file you are looking for doesn’t exist.</p>
  <div class="button-sec button-sec-hero text-start text-md-start pt-3 px-md-1 px-5 ps-mob-1">
                  <a href="#footer" class="btn btn-primary px-4 py-2 sec-btn sec-btn-404">
                     Home
