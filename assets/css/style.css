@@ -673,7 +673,7 @@ footer .footer-bottom {
 }
 .quote-left {
     top: -13px;
-    left: 22px;
+    left: 28px;
 }
  }
 
@@ -938,8 +938,8 @@ body.menu-open .logo-white {
 }
 
 .sec-btn-white{
-    background-color: #FFFFFF;
-    color: #28488A;
+    background-color: #FFFFFF !important;
+    color: #28488A !important;
 }
 
 
@@ -1406,12 +1406,11 @@ text-align: center;
     letter-spacing: -2px;
   
     text-align: center;
-    max-width: 298px;
     font-family: "Circular Book";
 }
 .t-name {
     font-size: 20px;
-    color: #001733;
+
     margin-top: 10px;
     text-align: center;
     font-family: "Circular Book";
@@ -1628,103 +1627,251 @@ i {
 
 
 
-/* SECTION 1 */
-.sec-1 {
-    background: #EEF3F8;
-    padding: 120px 0;
+/* ============================
+   GLOBAL
+============================ */
+.img-caption {
+    font-size: 14px;
+    margin-top: 8px;
+    color: #001429;
+    font-family: "Circular Book";
 }
 
-.intro-description-about{
+/* ============================
+   SECTION 1
+============================ */
+.sec-1 {
+    background: #E9EDF3;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    position: relative;
+}
+
+.intro-description-about {
     font-size: 50px;
     line-height: 52px;
     font-weight: 450;
     letter-spacing: -2px;
-     font-family: "Circular Book";
-     color: #001429;
-     max-width: 853px;
+    font-family: "Circular Book";
+    color: #001429;
+    max-width: 853px;
 }
 
 .sec-text {
-   font-size: 16px;
-   line-height: 25px;
-    color: #666;
-    letter-spacing: -0.11px;
-    font-weight: 400;
-    font-family: "Circular Book";
+    font-size: 16px;
+    line-height: 25px;
     color: #001429;
+    max-width: 530px;
 }
 
-.tall-img,
+/* Images */
+.tall-img {
+    width: 100%;
+    max-width: 213px;
+}
+
 .bottom-img {
     width: 100%;
+    max-width: 529px;
 }
 
-/* SECTION 1 — plus icons */
+/* Plus icons */
 .plus {
-    width: 73px;
     position: absolute;
+    width: 70px;
 }
 
 .plus-top {
-    top: -80px;
-    left: 20px;
-}
-
-.plus-bottom {
-    bottom: -30px;   /* stays inside Section 1 */
-    right: -30px;
-}
-
-/* SECTION 2 */
-.sec-2 {
-    background: #FFFFFF;
-    padding: 150px 0;
-    position: relative;
-}
-
-.plus-sec2 {
-    top: 40px;
+    top: 60px;       /* EXACT like Figma */
     left: 50%;
     transform: translateX(-50%);
 }
 
+.plus-bottom {
+    right: 10%;
+    bottom: -30px;
+}
+
+/* ============================
+   SECTION 2
+============================ */
+.sec-2 {
+    background: #FFFFFF;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    position: relative;
+    height: 1200px;
+}
+
+/* grey plus */
+.plus-sec2 {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+}
+
+/* text block on right */
+.sec2-title {
+    font-size: 38px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.sec2-list {
+    list-style: none;   /* remove default dots */
+    padding-left: 0;    /* remove default indent */
+    margin: 0;
+}
+
+.sec2-list li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    line-height: 21px;
+    color: #001429;
+    font-family: "Circular Book";
+    position: relative;
+    padding-left: 18px;  /* space for dash */
+}
+
+.sec2-list li::before {
+    content: "-";        /* the dash */
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #001429;      /* same as text */
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.large-img-wrapper{
+    position: absolute;
+}
+
+/* large image */
 .large-img {
     width: 100%;
-    margin-top: 40px;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
-/* MOBILE FIXES */
-@media (max-width:768px){
-     /* same as figma */
-    .sec-title {
-        font-size: 24px;
-    }
-}
+/* ============================
+   RESPONSIVE — SAME ICON POSITIONS
+============================ */
+@media (max-width: 991px){
 
-
-/* Desktop: apply max-width */
-@media (min-width: 992px) {
-    .tall-img {
-        max-width: 213px;
+    .intro-description-about {
+        font-size: 32px;
+        line-height: 36px;
+        max-width: 100%;
+        text-align: center;
     }
+
+    .sec-text {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .plus-top {
+        top: 40px;
+        width: 55px;
+    }
+
+    .plus-bottom {
+        bottom: -20px;
+        right: 20px;
+        width: 55px;
+    }
+
+    .plus-sec2 {
+        top: 40px;
+        width: 50px;
+    }
+
+    .tall-img,
     .bottom-img {
-        max-width: 539px;
+        max-width: 100%;
     }
 
-    .large-img{
-        max-width: 
-960px;
+    .large-img {
+        max-width: 100%;
+        z-index: 5555 !important;
+        position: static !important;
+
+              
     }
+
+    .sec2-title {
+        text-align: center;
+    }
+
+    .sec2-list {
+       
+        padding: 0;
+    }
+
+    .sec-2 {
+    
+    height: 810px;
+}
+
+.blue-sec {
+    background: #001429;
+    color: #fff;
+    padding-top: 0px !important;
+    padding-bottom: 176px;
+}
+
+
+
+
+
+
+
+.blue-img-right {
+    width: 100%;
+    max-width: 529px;
+    position: absolute;
+    margin-top: 0px !important;
+}
+.right-descrip {
+    padding-top: 0px !important;
+    text-align: center;
+}
+}
+
+
+.bottom-img-wrapper{
+    position: absolute;
+    z-index: 999;
+}
+
+
+@media (min-width: 1200px) {
+    .tall-img {
+    width: 100%;
+    max-width: 213px;
+    margin-left: 160px;
+}
+
+.img-caption-tall{
+    margin-left: 158px;
+}
 }
 
 
 
 /* BLUE SECTION */
 .blue-sec {
-    background: #144A9B; /* Blue background */
+    background: #001429;
     color: #fff;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 152px;
+    padding-bottom: 176px;
+   
 }
 
 .blue-heading {
@@ -1742,12 +1889,14 @@ i {
 /* Image sizing EXACT like your screenshot */
 .blue-img-left {
     width: 100%;
-    max-width: 430px; /* big image */
+    max-width: 371px; /* big image */
 }
 
 .blue-img-right {
     width: 100%;
-    max-width: 230px; /* tall image */
+    max-width: 529px;
+    position: absolute;
+     margin-top: -227px;
 }
 
 /* Responsive adjustments */
@@ -1762,8 +1911,12 @@ i {
 /* NEXT SECTION - TWO COLUMN TEXT */
 .text-cols-sec {
     background: #ffffff;
-    padding-top: 100px;
+   padding-top: 418px;
     padding-bottom: 100px;
+}
+
+.right-descrip{
+  padding-top: 236px;
 }
 
 .col-title {
@@ -1870,4 +2023,145 @@ i {
     .second-description-error{
         text-align: start;
     }
+
+    .sec-2 {
+   
+    padding-top: 58px;
+   
+}
+}
+.second-description-error{
+    color: #28488A;
+}
+
+.sec-btn-404 {
+    padding: 18px 60px !important;
+   
+}
+
+.sec-btn-404:hover{
+       padding: 18px 60px !important;
+}
+@media (max-width: 768px){
+    .ps-mob-1{
+        margin-left: -8px !important;
+    }
+
+    .ps-mob-2{
+        margin-left: 12px !important;
+    }
+
+    .blue-box {
+   
+    padding: 0px 0px !important;
+    
+}
+}
+
+@media (max-width: 768px) {
+    .button-sec-view {
+        margin-bottom: -12px !important;
+    }
+}
+
+ .button-sec-view {
+        margin-bottom: -12px !important;
+    }
+
+
+    .carousel-item {
+    position: relative;
+}
+
+.blue-label {
+    position: absolute;
+    bottom: -20px; /* Pull outside the image bottom */
+    right: 0;
+    transform: translateX(-50%);
+    background: #28488A;
+    color: #fff;
+    padding: 10px 25px;
+    font-size: 14px;
+    font-family: "Circular Book";
+    border-radius: 2px;
+    z-index: 999;
+    letter-spacing: -0.11px;
+}
+
+/* MOBILE BLUE LABEL STYLE */
+@media (max-width: 767px) {
+    .blue-label {
+        position: absolute;
+        left: 187px;
+        right: 0;
+        bottom: 0; 
+        width: 100%;
+        background: #28488A;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 13px;
+        text-align: left;
+        border-radius: 0;   /* remove desktop radius */
+    }
+}
+
+
+
+.carousel-inner {
+    overflow: visible !important; /* allows the label to overflow bottom */
+}
+
+
+
+.faq-list-faq {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    background: #ffffff;
+    padding: 60px 80px;
+    box-sizing: border-box;
+}
+
+
+
+@media (max-width: 768px) {
+    .faq-list-faq {
+        padding: 60px 7px !important;
+    }
+}
+
+
+.project-details-light-blue{
+    background-color: #28488A;
+}
+
+.project-details-blue{
+    background-color: #001429;
+}
+
+.project-details-sky{
+    background-color: #DFEAF2;
+}
+
+
+
+.video-full {
+    width: 100%;
+}
+
+.video-responsive {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
