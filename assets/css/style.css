@@ -1740,7 +1740,7 @@ i {
 }
 
 .sec2-list li {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 10px;
     line-height: 21px;
     color: #001429;
@@ -1849,7 +1849,7 @@ i {
 .blue-img-right {
     width: 100%;
     max-width: 529px;
-    position: absolute;
+    position: relative;
     margin-top: 0px !important;
 }
 .right-descrip {
@@ -1909,7 +1909,7 @@ i {
 .blue-img-right {
     width: 100%;
     max-width: 529px;
-    position: absolute;
+    position: relative;
      margin-top: -227px;
 }
 
