@@ -67,15 +67,12 @@
 </head>
 <body>
 
- <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light px-md-5 px-3">
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top px-md-5 px-3">
     <div class="container pt-md-4 pt-3 py-3">
 
         <!-- LOGO -->
-        <a class="navbar-brand" href="#">
-            <!-- BLUE LOGO (default) -->
+        <a class="navbar-brand" href="index.html">
             <img class="logo-blue" src="assets/images/md-building-services-logo-blue.svg" alt="MD Building Services">
-
-            <!-- WHITE LOGO (mobile menu open) -->
             <img class="logo-white" src="assets/images/md-building-services-logo-white.svg" alt="MD Building Services">
         </a>
 
@@ -87,27 +84,56 @@
             <span class="toggler-icon bottom-bar"></span>
         </button>
 
-        <!-- MOBILE MENU -->
+        <!-- MENU -->
         <div class="collapse navbar-collapse mobile-menu" id="navbarCollapse">
             <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+
+                <!-- HOME -->
                 <li class="nav-item">
-                    <a class="nav-link mobile-link" href="index.html">HOME</a>
+                    <a class="nav-link mobile-link" href="index.html"><span>HOME</span></a>
                 </li>
+               <!-- RESIDENTIAL -->
+                <!-- About-->
+              <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle mobile-link" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown">
+        <span>About</span>
+    </a>
+    <ul class="dropdown-menu custom-dropdown" aria-labelledby="aboutDropdown">
+         <li><a class="dropdown-item" href="about.html">OUR COMPANY</a></li>
+        <li><a class="dropdown-item" href="faq.html">FAQS</a></li>
+        <li><a class="dropdown-item" href="testimonial.html">TESTIMONIALS</a></li>
+    </ul>
+</li>
+                
+
+
+                <!-- RESIDENTIAL -->
                 <li class="nav-item">
-                    <a class="nav-link mobile-link" href="about.html">ABOUT</a>
+                    <a class="nav-link mobile-link active" href="residential.html"><span>RESIDENTIAL</span></a>
                 </li>
+
+                <!-- COMMERCIAL -->
                 <li class="nav-item">
-                    <a class="nav-link mobile-link" href="residential.html">RESIDENTIAL</a>
+                    <a class="nav-link mobile-link" href="commercial.html"><span>COMMERCIAL</span></a>
                 </li>
+
+                <!-- PORTFOLIO  -->
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle mobile-link" href="#" id="portfolioDropdown" role="button" data-bs-toggle="dropdown">
+        <span>Portfolio</span>
+    </a>
+    <ul class="dropdown-menu custom-dropdown" aria-labelledby="portfolioDropdown">
+        <li><a class="dropdown-item" href="portfolio.html">All Projects</a></li>
+        <li><a class="dropdown-item" href="residential.html">Residential</a></li>
+        <li><a class="dropdown-item" href="commercial.html">Commercial</a></li>
+    </ul>
+</li>
+
+                <!-- CONTACT -->
                 <li class="nav-item">
-                    <a class="nav-link mobile-link" href="commercial.html">COMMERCIAL</a>
+                    <a class="nav-link mobile-link" href="contact.html"><span>CONTACT</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link mobile-link" href="portfolio.html">PORTFOLIO</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link mobile-link" href="contact.html">CONTACT</a>
-                </li>
+
             </ul>
         </div>
 
