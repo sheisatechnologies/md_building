@@ -1115,60 +1115,58 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 
-<script>document.addEventListener("DOMContentLoaded", function () {
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
-    const white = document.querySelector('.logo-white');
-    const blue = document.querySelector('.logo-blue');
     const navbar = document.querySelector(".navbar");
     const navbarCollapse = document.getElementById("navbarCollapse");
+    const white = document.querySelector(".logo-white");
+    const blue = document.querySelector(".logo-blue");
 
-    // -----------------------------
-    // HANDLE SCROLL
-    // -----------------------------
-    function handleScroll() {
+    function forceWhiteLogo() {
+        white.style.display = "block";
+        blue.style.display = "none";
+    }
+
+    function applyScrollLogo() {
+        if (document.body.classList.contains("menu-open")) {
+            // Menu open → ALWAYS WHITE
+            forceWhiteLogo();
+            return;
+        }
+
         if (window.scrollY > 10) {
             navbar.classList.add("scrolled");
-            white.style.display = "none";   // blue logo when scrolled
+            white.style.display = "none";
             blue.style.display = "block";
         } else {
             navbar.classList.remove("scrolled");
-            white.style.display = "block";  // white logo before scroll
+            white.style.display = "block";
             blue.style.display = "none";
         }
     }
 
-    handleScroll();
-    window.addEventListener("scroll", handleScroll);
+    // INITIAL CHECK
+    applyScrollLogo();
 
-    // -----------------------------
-    // MENU OPEN = ALWAYS WHITE LOGO
-    // -----------------------------
-    navbarCollapse.addEventListener('show.bs.collapse', function () {
-        white.style.display = "block";  // show white logo
-        blue.style.display = "none";    // hide blue logo
-        document.body.classList.add('menu-open');
+    // HANDLE SCROLL
+    window.addEventListener("scroll", applyScrollLogo);
+
+    // MENU OPEN → FORCE WHITE LOGO
+    navbarCollapse.addEventListener("show.bs.collapse", function () {
+        document.body.classList.add("menu-open");
+        forceWhiteLogo();
     });
 
-    // -----------------------------
-    // MENU CLOSE = RESTORE LOGO BY SCROLL POSITION
-    // -----------------------------
-    navbarCollapse.addEventListener('hidden.bs.collapse', function () {
-
-        document.body.classList.remove('menu-open');
-
-        if (window.scrollY > 10) {
-            // If page is scrolled → blue logo
-            white.style.display = "none";
-            blue.style.display = "block";
-        } else {
-            // If page is top → white logo
-            white.style.display = "block";
-            blue.style.display = "none";
-        }
+    // MENU CLOSE → RESTORE SCROLL LOGO
+    navbarCollapse.addEventListener("hidden.bs.collapse", function () {
+        document.body.classList.remove("menu-open");
+        applyScrollLogo();
     });
 
 });
 </script>
+
 
 
 

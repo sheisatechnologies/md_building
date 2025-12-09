@@ -2043,6 +2043,10 @@ i {
     padding-top: 58px;
    
 }
+
+.navbar-nav .nav-link.active span::after, .navbar-nav .dropdown-toggle.active span::after {
+display: none;
+}
 }
 .second-description-error{
     color: #28488A;
