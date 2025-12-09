@@ -63,8 +63,64 @@
             text-align: center;
         }
     }
+
+    
 </style>
 <style>
+
+@media (max-width: 992px) {
+
+    /* BEFORE SCROLL → hamburger white */
+    .navbar-toggler .toggler-icon {
+        background-color: #ffffff !important;
+    }
+
+    /* AFTER SCROLL → hamburger blue */
+    .navbar.scrolled .navbar-toggler .toggler-icon {
+        background-color: #003DA5 !important;
+    }
+
+    /* CROSS (menu open) → ALWAYS white */
+    .navbar-toggler:not(.collapsed) .toggler-icon {
+        background-color: #ffffff !important;
+    }
+
+    /* EVEN when scrolled, keep cross white */
+    .navbar.scrolled .navbar-toggler:not(.collapsed) .toggler-icon {
+        background-color: #ffffff !important;
+    }
+
+    /* LOGO FIX — menu open must show white logo */
+    body.menu-open .logo-white {
+        display: block !important;
+    }
+    body.menu-open .logo-blue {
+        display: none !important;
+    }
+}
+
+/* MOBILE: force white logo when mobile menu is open */
+@media (max-width: 992px) {
+
+  /* Normal default (you may already have these) */
+  .logo-white { display: none; }
+  .logo-blue  { display: block;  }
+
+  /* When scrolled — keep your normal behavior */
+  .navbar.scrolled .logo-white { display: none; }
+  .navbar.scrolled .logo-blue  { display: block; }
+
+  /* CRITICAL: when menu is open (body.menu-open) ALWAYS show white logo */
+  /* Very specific selector + !important to beat other rules */
+  body.menu-open .navbar .logo-white { display: block !important; }
+  body.menu-open .navbar .logo-blue  { display: none  !important; }
+
+  /* Ensure the cross is white (bars/rotated bars) */
+  .navbar-toggler:not(.collapsed) .toggler-icon {
+    background-color: #ffffff !important;
+  }
+}
+
     .hero-section {
     position: relative;
     width: 100%;
@@ -209,7 +265,26 @@
         min-height: 300px;   /* smaller height */
         background-position: center center; /* centre for mobile */
     }
+
+    .navbar.scrolled .nav-link {
+    color: #fff !important;
 }
+}
+
+/* Mobile screens (max-width: 992px) → white links when scrolled */
+@media (max-width: 992px) {
+    .navbar.scrolled .nav-link {
+        color: #ffffff !important;
+    }
+}
+
+/* Desktop screens (min-width: 993px) → blue links when scrolled */
+@media (min-width: 993px) {
+    .navbar.scrolled .nav-link {
+        color: #28488A !important;
+    }
+}
+
 
 .custom-btn {
     width: 253px;
@@ -258,7 +333,7 @@
 
 /* After scroll menu color black */
 .navbar.scrolled .nav-link {
-    color: #000 !important;
+    color: #28488A;
 }
 
 /* Show blue logo when scrolled */
@@ -1039,20 +1114,64 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const navLinks = document.querySelectorAll(".mobile-menu .nav-link");
-    const navbarCollapse = document.getElementById("navbarCollapse");
-    const bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: false });
 
-    navLinks.forEach(link => {
-        link.addEventListener("click", () => {
-            bsCollapse.hide();   // mobile menu বন্ধ হবে
-            document.body.classList.remove("menu-open"); // white logo off
-        });
+<script>document.addEventListener("DOMContentLoaded", function () {
+
+    const white = document.querySelector('.logo-white');
+    const blue = document.querySelector('.logo-blue');
+    const navbar = document.querySelector(".navbar");
+    const navbarCollapse = document.getElementById("navbarCollapse");
+
+    // -----------------------------
+    // HANDLE SCROLL
+    // -----------------------------
+    function handleScroll() {
+        if (window.scrollY > 10) {
+            navbar.classList.add("scrolled");
+            white.style.display = "none";   // blue logo when scrolled
+            blue.style.display = "block";
+        } else {
+            navbar.classList.remove("scrolled");
+            white.style.display = "block";  // white logo before scroll
+            blue.style.display = "none";
+        }
+    }
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+
+    // -----------------------------
+    // MENU OPEN = ALWAYS WHITE LOGO
+    // -----------------------------
+    navbarCollapse.addEventListener('show.bs.collapse', function () {
+        white.style.display = "block";  // show white logo
+        blue.style.display = "none";    // hide blue logo
+        document.body.classList.add('menu-open');
     });
+
+    // -----------------------------
+    // MENU CLOSE = RESTORE LOGO BY SCROLL POSITION
+    // -----------------------------
+    navbarCollapse.addEventListener('hidden.bs.collapse', function () {
+
+        document.body.classList.remove('menu-open');
+
+        if (window.scrollY > 10) {
+            // If page is scrolled → blue logo
+            white.style.display = "none";
+            blue.style.display = "block";
+        } else {
+            // If page is top → white logo
+            white.style.display = "block";
+            blue.style.display = "none";
+        }
+    });
+
 });
 </script>
+
+
+
 
 
 <script>
