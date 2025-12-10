@@ -566,7 +566,16 @@
     </script>
 
    
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const toggler = document.querySelector(".navbar-toggler");
+    const body = document.body;
 
+    toggler.addEventListener("click", function () {
+        body.classList.toggle("menu-open");
+    });
+});
+</script>
 
 
 </body>
