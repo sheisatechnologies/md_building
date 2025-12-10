@@ -2101,6 +2101,16 @@ display: none;
         margin-left: -10px !important;
     }
 
+    .px-mob-1 {
+        padding-left: 19px !important;
+        padding-right: 27px !important;
+    }
+
+        .px-mob-2 {
+        padding-left: 27px !important;
+        padding-right: 48px !important;
+    }
+
     .blue-box {
    
     padding: 0px 0px !important;
@@ -2129,6 +2139,12 @@ display: none;
         .ps-desk-5 {
         margin-left: -3px !important;
     }
+
+     .ps-desk-6 {
+        margin-left: 36px !important;
+    }
+
+    
 
 
 
@@ -2349,3 +2365,10 @@ display: none;
 
 
 
+.white-box {
+    background: #fff;
+    border-radius: 4px;
+    padding: 70px 0px;
+    text-align: right;
+    position: relative;
+}

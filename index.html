@@ -1124,19 +1124,24 @@ document.addEventListener("DOMContentLoaded", function () {
     const navbarCollapse = document.getElementById("navbarCollapse");
     const white = document.querySelector(".logo-white");
     const blue = document.querySelector(".logo-blue");
+    const toggler = document.querySelector(".navbar-toggler");
 
+    /* ---- FORCE WHITE LOGO ---- */
     function forceWhiteLogo() {
         white.style.display = "block";
         blue.style.display = "none";
     }
 
+    /* ---- APPLY SCROLL LOGO ---- */
     function applyScrollLogo() {
+
+        // 🔥 If mobile menu is open → ALWAYS WHITE LOGO (STOP HERE)
         if (document.body.classList.contains("menu-open")) {
-            // Menu open → ALWAYS WHITE
             forceWhiteLogo();
             return;
         }
 
+        // Normal behavior when menu is NOT open
         if (window.scrollY > 10) {
             navbar.classList.add("scrolled");
             white.style.display = "none";
@@ -1148,26 +1153,35 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // INITIAL CHECK
+    /* ---- INITIAL CHECK ---- */
     applyScrollLogo();
 
-    // HANDLE SCROLL
+
+    /* ---- ON SCROLL ---- */
     window.addEventListener("scroll", applyScrollLogo);
 
-    // MENU OPEN → FORCE WHITE LOGO
+
+    /* ---- MENU OPEN EVENTS ---- */
     navbarCollapse.addEventListener("show.bs.collapse", function () {
         document.body.classList.add("menu-open");
         forceWhiteLogo();
     });
 
-    // MENU CLOSE → RESTORE SCROLL LOGO
+    /* ---- MENU CLOSE EVENTS ---- */
     navbarCollapse.addEventListener("hidden.bs.collapse", function () {
         document.body.classList.remove("menu-open");
         applyScrollLogo();
     });
 
+
+    /* ---- BODY CLASS FOR TOGGLER ANIMATION ---- */
+    toggler.addEventListener("click", function () {
+        document.body.classList.toggle("menu-open");
+    });
+
 });
 </script>
+
 
 
 
