@@ -180,9 +180,9 @@
         <span>Portfolio</span>
     </a>
     <ul class="dropdown-menu custom-dropdown" aria-labelledby="portfolioDropdown">
-        <li><a class="dropdown-item" href="portfolio.html">All Projects</a></li>
-        <li><a class="dropdown-item" href="residential.html">Residential</a></li>
-        <li><a class="dropdown-item" href="commercial.html">Commercial</a></li>
+         <li><a class="dropdown-item" href="portfolio.html"> ALL PROJECTS</a></li>
+        <li><a class="dropdown-item" href="residential.html">RESIDENCIAL</a></li>
+        <li><a class="dropdown-item" href="commercial.html">COMMERCIAL</a></li>
     </ul>
 </li>
 
@@ -584,50 +584,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const navLinks = document.querySelectorAll(".mobile-menu .nav-link");
-    const navbarCollapse = document.getElementById("navbarCollapse");
-    const bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: false });
-
-    navLinks.forEach(link => {
-        link.addEventListener("click", () => {
-            bsCollapse.hide();   // mobile menu বন্ধ হবে
-            document.body.classList.remove("menu-open"); // white logo off
-        });
-    });
-});
-</script>
-
-
-<script>
-    const faqItems = document.querySelectorAll('.faq-item');
-
-    faqItems.forEach(item => {
-        item.querySelector('.faq-question').addEventListener('click', () => {
-
-            // CLOSE all first
-            faqItems.forEach(i => {
-                if (i !== item) {
-                    i.classList.remove('active');
-                }
-            });
-
-            // TOGGLE clicked one
-            item.classList.toggle('active');
-        });
-    });
-</script>
-
-
-<script>
-    [...document.body.querySelectorAll('*')].forEach(el => {
-  if (el.offsetWidth > document.documentElement.clientWidth) {
-    console.log('Overflow Element:', el);
-  }
-});
-
-</script>
 
 
 
