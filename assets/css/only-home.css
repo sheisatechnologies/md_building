@@ -1,0 +1,336 @@
+
+   
+    /* DESKTOP TYPOGRAPHY */
+    .section-heading-custom {
+        color: #001429;
+        font-family: "Circular Std", Helvetica, Arial, sans-serif;
+        font-weight: 450;
+        font-size: 40px;
+        line-height: 52px;
+        letter-spacing: -2px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    /* MOBILE TYPOGRAPHY (Your exact settings) */
+    @media (max-width: 767px) {
+        .section-heading-custom {
+            font-size: 20px;
+            line-height: 23px;
+            letter-spacing: 0px;
+            font-weight: 450;
+            text-align: center;
+        }
+    }
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 992px) {
+
+    /* BEFORE SCROLL → hamburger white */
+    .navbar-toggler .toggler-icon {
+        background-color: #ffffff !important;
+    }
+
+    /* AFTER SCROLL → hamburger blue */
+    .navbar.scrolled .navbar-toggler .toggler-icon {
+        background-color: #003DA5 !important;
+    }
+
+    /* CROSS (menu open) → ALWAYS white */
+    .navbar-toggler:not(.collapsed) .toggler-icon {
+        background-color: #ffffff !important;
+    }
+
+    /* EVEN when scrolled, keep cross white */
+    .navbar.scrolled .navbar-toggler:not(.collapsed) .toggler-icon {
+        background-color: #ffffff !important;
+    }
+
+    /* LOGO FIX — menu open must show white logo */
+    body.menu-open .logo-white {
+        display: block !important;
+    }
+    body.menu-open .logo-blue {
+        display: none !important;
+    }
+}
+
+/* MOBILE: force white logo when mobile menu is open */
+@media (max-width: 992px) {
+
+  /* Normal default (you may already have these) */
+  .logo-white { display: none; }
+  .logo-blue  { display: block;  }
+
+  /* When scrolled — keep your normal behavior */
+  .navbar.scrolled .logo-white { display: none; }
+  .navbar.scrolled .logo-blue  { display: block; }
+
+  /* CRITICAL: when menu is open (body.menu-open) ALWAYS show white logo */
+  /* Very specific selector + !important to beat other rules */
+  body.menu-open .navbar .logo-white { display: block !important; }
+  body.menu-open .navbar .logo-blue  { display: none  !important; }
+
+  /* Ensure the cross is white (bars/rotated bars) */
+  .navbar-toggler:not(.collapsed) .toggler-icon {
+    background-color: #ffffff !important;
+  }
+}
+
+    .hero-section {
+    position: relative;
+    width: 100%;
+}
+
+/* full width bg image */
+.hero-bg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* container overlay on image */
+.hero-overlay {
+    position: absolute;
+    top: 50%;                          /* move to vertical center */
+    left: 50%;
+    transform: translate(-50%, -50%);  /* true centering */
+    width: 100%;
+}
+
+/* ensure content stays inside container */
+.hero-content {
+    max-width: 1140px;  /* Bootstrap container max */
+    margin: 0 auto;
+}
+
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .hero-overlay {
+       top: 59%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
+
+
+/* Hero section fixed height on large screens */
+@media (min-width: 992px) {
+    .hero-section {
+        height: 750px; /* You can adjust based on your design */
+        position: relative;
+        overflow: visible;
+    }
+
+    .hero-bg {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;        /* keeps image beautiful */
+        object-position: center;  /* focus center */
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+
+
+
+/* Hero section fixed height on large screens */
+@media (min-width: 1500px) {
+    .hero-section {
+        height: 1000px; /* You can adjust based on your design */
+        position: relative;
+        overflow: visible;
+    }
+
+    .hero-bg {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;        /* keeps image beautiful */
+        object-position: center;  /* focus center */
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+/* Mobile auto height */
+@media (max-width: 991px) {
+    .hero-bg {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+}
+
+
+
+
+
+
+
+
+
+    /* SECTION BACKGROUND SPLIT */
+
+
+.makesus-section {
+    background-color: #001429; /* তোমার color */
+             /* উপরে নিচে spacing */
+    width: 100%;
+}
+
+/* LEFT DARK BLOCK */
+.left-box {
+    background-color: #001429; /* your Figma navy */
+    min-height: 500px; /* auto adjust based on content */
+}
+
+/* LIST STYLE */
+.diff-list {
+    list-style: none;
+    padding: 0;
+}
+.diff-list li {
+    margin-bottom: 15px;
+    padding-left: 20px;
+    position: relative;
+}
+.diff-list li::before {
+    content: "_";
+    position: absolute;
+    left: -6px;
+    top: -12px;
+    font-size: 22px;
+    color: #fff;
+}
+
+/* RIGHT IMAGE FULL HEIGHT */
+.right-image {
+    background-image: url("assets/images/home-makes-us-different.jpg");
+    background-size: cover;
+    background-position: center right;
+    width: 100%;
+    height: 100%;
+    
+}
+
+
+@media (max-width: 767px) {
+    .right-image {
+        min-height: 300px;   /* smaller height */
+        background-position: center center; /* centre for mobile */
+    }
+
+    .navbar.scrolled .nav-link {
+    color: #fff !important;
+}
+}
+
+/* Mobile screens (max-width: 992px) → white links when scrolled */
+@media (max-width: 992px) {
+    .navbar.scrolled .nav-link {
+        color: #ffffff !important;
+    }
+}
+
+/* Desktop screens (min-width: 993px) → blue links when scrolled */
+@media (min-width: 993px) {
+    .navbar.scrolled .nav-link {
+        color: #28488A !important;
+    }
+}
+
+
+.custom-btn {
+    width: 253px;
+    height: 53px;
+    background-color: #fff !important;
+    color: #28488A !important;
+     /* optional: add border for style */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.custom-btn:hover {
+    background-color: #D4DAE8 !important;
+    color: white !important;
+}
+.bg-white{
+    background-color: white;
+    color: #28488A;
+;
+}
+
+
+
+.navbar {
+    background: transparent;
+    transition: 0.3s ease;
+}
+
+/* Menu text white initially */
+.navbar .nav-link {
+    color: #fff !important;
+}
+
+/* Logo: show white version initially */
+.logo-white { display: block; }
+.logo-blue { display: none; }
+
+
+.navbar.scrolled {
+   background-color: rgba(255, 255, 255, 0.80) !important;
+    backdrop-filter: blur(10px);
+}
+
+/* After scroll menu color black */
+.navbar.scrolled .nav-link {
+    color: #28488A;
+}
+
+/* Show blue logo when scrolled */
+.navbar.scrolled .logo-white { display: none; }
+.navbar.scrolled .logo-blue { display: block; }
+
+
+.navbar-toggler.collapsed .top-bar, .middle-bar, .bottom-bar {
+    position: absolute;
+    top: 0px;
+    transform: rotate(0deg);
+    background-color: #fff;
+}
+
+
+
+
+
+
+
+
+
+

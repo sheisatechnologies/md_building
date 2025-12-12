@@ -2373,3 +2373,55 @@ display: none;
     text-align: right;
     position: relative;
 }
+
+
+
+
+ /* DESKTOP TYPOGRAPHY */
+    .section-heading-custom {
+        color: #001429;
+        font-family: "Circular Std", Helvetica, Arial, sans-serif;
+        font-weight: 450;
+        font-size: 50px;
+        line-height: 52px;
+        letter-spacing: -2px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    /* MOBILE TYPOGRAPHY (Your exact settings) */
+    @media (max-width: 767px) {
+        .section-heading-custom {
+            font-size: 20px;
+            line-height: 23px;
+            letter-spacing: 0px;
+            font-weight: 450;
+            text-align: center;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
